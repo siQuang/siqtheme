@@ -1,0 +1,286 @@
+<div id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <!-- sidebar-menu  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>Categories</span>
+                        </li>
+                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'db') { %>active<% } %>">
+                            <a href="#">
+                                <i class="ti-dashboard"></i>
+                                <span class="menu-text">Dashboard</span>
+                                <span class="badge badge-pill badge-warning">New</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'dashboard1') { %>class="active"<% } %>>
+                                        <a href="index.html">Dashboard 1
+                                            <span class="badge badge-pill badge-success">Pro</span>
+                                        </a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'dashboard2') { %>class="active" <% } %>>
+                                        <a href="index2.html">Dashboard 2</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'dashboard3') { %>class="active" <% } %>>
+                                        <a href="index3.html">Dashboard 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'cp') { %>active<% } %>">
+                            <a href="#">
+                                <i class="ti-plug"></i>
+                                <span class="menu-text">Components</span>
+                                <span class="badge badge-pill badge-danger">3</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpdate') { %>class="active" <% } %>>
+                                        <a href="component_date_time.html">Date & Time</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpswitch') { %>class="active" <% } %>>
+                                        <a href="component_switch.html">Switches</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cptag') { %>class="active" <% } %>>
+                                        <a href="component_tags.html">Tags</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpselect') { %>class="active" <% } %>>
+                                        <a href="component_select.html">Select</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpmselect') { %>class="active" <% } %>>
+                                        <a href="component_multiple_select.html">Multi-Select</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpeditor') { %>class="active" <% } %>>
+                                        <a href="component_wysiwyg.html">WYSIWYG Editors</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cptouchspin') { %>class="active" <% } %>>
+                                        <a href="component_touchspin.html">Touchspins</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpslider') { %>class="active" <% } %>>
+                                        <a href="component_range_slider.html">Range Sliders</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'cpdial') { %>class="active" <% } %>>
+                                        <a href="component_circle_dial.html">Circle Dials</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'ui') { %>active<% } %>">
+                            <a href="#">
+                                <i class="ti-palette"></i>
+                                <span class="menu-text">UI Elements</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uitypo') { %>class="active"<% } %>>
+                                        <a href="ui_typography.html">Typography</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uicolor') { %>class="active" <% } %>>
+                                        <a href="ui_colors.html">Colors</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uifa') { %>class="active"<% } %>>
+                                        <a href="ui_fontawesome.html">Fontawesome Icons</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uithemify') { %>class="active"<% } %>>
+                                        <a href="ui_themify.html">Themify Icons</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uibutton') { %>class="active"<% } %>>
+                                        <a href="ui_buttons.html">Buttons</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uicard') { %>class="active"<% } %>>
+                                        <a href="ui_cards.html">Cards</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uimodal') { %>class="active"<% } %>>
+                                        <a href="ui_modals.html">Modals</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uitab') { %>class="active"<% } %>>
+                                        <a href="ui_tabs.html">Tabs</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uibadge') { %>class="active"<% } %>>
+                                        <a href="ui_badge_label.html">Badges & Labels</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'uitoastr') { %>class="active"<% } %>>
+                                        <a href="ui_toastr.html">Toastr Notifications</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'tb') { %>active<% } %>">
+                            <a href="#">
+                                <i class="ti-layout-grid2"></i>
+                                <span class="menu-text">Tables</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'tbbasic') { %>class="active" <% } %>>
+                                        <a href="table_basic.html">Basic Tables</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'tbdata') { %>class="active" <% } %>>
+                                        <a href="table_datatables.html">Datatables</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'fo') { %>active<% } %>">
+                            <a href="#">
+                                <i class="ti-write"></i>
+                                <span class="menu-text">Forms</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'focontrol') { %>class="active" <% } %>>
+                                        <a href="form_control.html">Form Control</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'foelement') { %>class="active" <% } %>>
+                                        <a href="form_element.html">Form Elements</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'fowizard') { %>class="active" <% } %>>
+                                        <a href="form_wizard.html">Form Wizard</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'foautocomplete') { %>class="active" <% } %>>
+                                        <a href="form_autocomplete.html">Autocomplete</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'foupload') { %>class="active" <% } %>>
+                                        <a href="form_file_upload.html">File Upload</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'fodropzone') { %>class="active" <% } %>>
+                                        <a href="form_dropzone.html">Dropzone Upload</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'ch') { %>active<% } %>">
+                            <a href="#">
+                                <i class="ti-bar-chart"></i>
+                                <span class="menu-text">Charts</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'ch') { %>class="active" <% } %>>
+                                        <a href="chart_pie.html">Pie chart</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'ch') { %>class="active" <% } %>>
+                                        <a href="chart_line.html">Line chart</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'ch') { %>class="active" <% } %>>
+                                        <a href="chart_bar.html">Bar chart</a>
+                                    </li>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'ch') { %>class="active" <% } %>>
+                                        <a href="chart_histogram.html">Histogram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="ti-map-alt"></i>
+                                <span class="menu-text">Maps</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Google maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Open street map</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="ti-shopping-cart"></i>
+                                <span class="menu-text">E-Commerce</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="ecommerce_product.html">Products</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecommerce_order.html">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecommerce_invoice.html">Invoice</a>
+                                    </li>
+                                    <li>
+                                        <a href="ecommerce_cart.html">Cart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header-menu">
+                            <span>Extra</span>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="ti-file"></i>
+                                <span class="menu-text">Pages</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="page_profile.html">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="page_about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="page_contact.html">Contact</a>
+                                    </li>
+                                    <li>
+                                        <a href="page_login.html" target="_blank">Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="ti-layers-alt"></i>
+                                <span class="menu-text">Multi-Levels Menu</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:;">Submenu Level 1</a>
+                                        <div class="sidebar-submenu">
+                                            <ul>
+                                                <li><a href="javascript:;">Submenu Level 2</a></li>
+                                                <li><a href="javascript:;">Submenu Level 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">Submenu Level 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">Submenu Level 1</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="documenation.html">
+                                <i class="ti-agenda"></i>
+                                <span class="menu-text">Documentation</span>
+                                <span class="badge badge-pill badge-primary">Beta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="calendar.html">
+                                <i class="ti-calendar"></i>
+                                <span class="menu-text">Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="seed.html">
+                                <i class="ti-star"></i>
+                                <span class="menu-text">Seed Page</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+        </div>
