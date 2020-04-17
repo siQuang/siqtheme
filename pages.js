@@ -33,5 +33,11 @@ module.exports = [
         filename: "ui_cards.html",
         topmenu: "ui",
         submenu: "uicard",
+    }, {
+        title: "siQtheme - UI Colors",
+        template: "src/ui_colors.ejs",
+        filename: "ui_colors.html",
+        topmenu: "ui",
+        submenu: "uicolor"
     }
 ];
