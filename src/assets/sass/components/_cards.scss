@@ -1,0 +1,93 @@
+.card {
+	border-radius: 0.18rem;
+	background-color: $default-card-bg;
+
+	.card-header {
+		display: grid;
+		grid-template-columns: auto auto;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0); // leave alone
+		font-size: 1.1rem;
+
+		.caption {
+			color: $default-card-header-font;
+			grid-column: 1;
+			margin-top: 3px;
+		}
+
+		.tools {
+			justify-self: end;
+
+			ul.pagination {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+	.card-body {
+		> .number-left,
+		> .icon-left {
+			display: inline-block;
+			float: left;
+		}
+
+		> .number-right,
+		> .icon-right {
+			display: inline-block;
+			float: right;
+		}
+
+		> .icon-left,
+		> .icon-right {
+			font-size: 3rem;
+			color: $color-gray-500;
+		}
+
+		> .progress {
+			clear: both;
+
+			&.height-1 { height: 1px; }
+			&.height-2 { height: 2px; }
+			&.height-3 { height: 3px; }
+			&.height-4 { height: 5px; }
+			&.height-5 { height: 7px; }
+		}
+
+		> .progress-text {
+			clear: both;
+		}
+
+		> .chart {
+			clear: both;
+		}
+	}
+
+	ul li {
+		background-color: transparent;
+	}
+
+	&.card-tabs {
+		.nav-tabs .nav-link.active,
+		.nav-tabs .nav-item.show .nav-link {
+			background-color: $default-card-tabs-active;
+			border-bottom-color: $default-card-tabs-active;
+		}
+
+		.card-body {
+			background-color: $default-card-tabs-active;
+		}
+	}
+}
+
+@each $name, $color in $siqtheme-colors {
+    .card.card-#{$name} {
+        color: color-yiq($color) !important;
+        border-color: darken($color, 5%);
+        background-color: $color;
+    }
+
+    .card.card-outline-#{$name} {
+    	background: transparent;
+    	border-color: $color;
+    }
+}

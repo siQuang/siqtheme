@@ -1,0 +1,8 @@
+.note-editor {
+    height: auto !important;
+
+    &.fullscreen,
+    &.note-frame.fullscreen {
+        z-index: $zindex-note-editor;
+    }
+}

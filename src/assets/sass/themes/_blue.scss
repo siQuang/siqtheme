@@ -1,0 +1,200 @@
+body.theme-blue {
+	color: $blue-font-color;
+	background: $blue-background-color;
+
+	// ---------------------------------------------
+	// Header
+	// ---------------------------------------------
+	.header {
+	    background-color: $blue-header-bg-color;
+
+	    > .header-bar {
+		    color: $blue-header-font-color;
+
+		    a {
+		    	color: $blue-header-font-color;
+		    }
+
+		    .navigation {
+				.navbar-search {
+					> .input-group {
+						.input-group-text {
+							border-left-color: $blue-header-border-color;
+							color: $color-gray-600;
+						}
+					}
+				}
+
+				.navbar-menu {
+					.menu-item {
+						.btn {
+							border-left: 1px solid $blue-header-border-color;
+
+							&:focus {
+								background: darken($blue-header-border-color, 15%);
+							}
+						}
+
+						> .dropdown-menu {
+							color: $blue-header-font-color;
+							background: $blue-header-bg-color;
+
+							li:not(.dropdown-header) {
+								background: lighten($blue-header-bg-color, 10%);
+
+								&:hover {
+									background: lighten($blue-header-bg-color, 15%);
+								}
+							}
+
+							&.dropdown-alert > li {
+								border-bottom: 1px solid $blue-header-bg-color;
+							}
+
+							&.dropdown-message {
+								> li:not(.dropdown-header) {
+									border-bottom: 1px solid $blue-header-bg-color;
+								}
+							}
+						}
+					}
+				}
+		    }
+	    }
+	}
+
+
+	// ---------------------------------------------
+	// Sidebar
+	// ---------------------------------------------
+	.sidebar {
+		color: $blue-sidebar-font-color;
+	    background-color: $blue-sidebar-bg-color;
+
+	    a {
+			color: $blue-sidebar-font-color;
+
+			&:hover {
+				color: $color-white;
+			}
+	    }
+
+	    .sidebar-menu {
+	    	.header-menu {
+	    		color: $blue-sidebar-header-menu-color;
+	    	}
+
+	    	.sidebar-dropdown {
+		    	&.active {
+	                .sidebar-submenu {
+	                    background-color: darken($blue-sidebar-bg-color, 3%);
+	                }
+	            }
+		    }
+	    }
+	}
+
+	// ---------------------------------------------
+	// Sidebar Collapsed
+	// ---------------------------------------------
+	.grid-wrapper.sidebar-collapsed {
+		.sidebar {
+			#sidebar-menu {
+				> li {
+					&.mm-active {
+						background: $blue-collapsed-active-bg-color;
+						i {
+							color: $blue-collapsed-active-font-color;
+						}
+					}
+				}
+
+				.sidebar-submenu {
+					background: $blue-collapsed-active-bg-color;
+				}
+
+			}
+		}
+	}
+
+	// ---------------------------------------------
+	// Sidebar Right
+	// ---------------------------------------------
+	#sidebar-right {
+	    background: $blue-sidebar-right-bg-color;
+	    box-shadow: $blue-sidebar-right-box-shadow;
+
+	    .sidebar-right-container {
+	        ul.nav-tabs {
+	            li {
+	                a {
+	                    border-right: 1px solid $blue-sidebar-right-tab-active-bg;
+
+	                    &:not(.active) {
+	                        color: $blue-sidebar-right-tabs-font;
+	                        background: $blue-sidebar-right-tabs-bg;
+	                    }
+
+	                    &.active {
+	                        color: $blue-sidebar-right-tabs-font;
+	                        background: $blue-sidebar-right-tab-active-bg;
+	                    }
+	                }
+	            }
+	        }
+
+	        > .tab-content {
+	            .pane-header {
+	                color: $blue-sidebar-right-pane-header-font;
+	                background: $blue-sidebar-right-tab-active-bg;
+	            }
+	        }
+	    }
+	}
+
+	// ---------------------------------------------
+	// Main
+	// ---------------------------------------------
+	.main {
+	    background-color: $blue-main-bg-color;
+	}
+
+	// ---------------------------------------------
+	// Footer
+	// ---------------------------------------------
+	.footer {
+		background: $blue-footer-bg-color;;
+	}
+
+	// ---------------------------------------------
+	// Cards
+	// ---------------------------------------------
+	.card {
+		background: $blue-card-bg;
+
+		.card-header {
+			.caption {
+				color: $blue-card-header-font;
+			}
+		}
+
+		&.card-tabs {
+			.nav-tabs .nav-link.active,
+			.nav-tabs .nav-item.show .nav-link {
+				color: $color-gray-400;
+				background-color: $blue-card-tabs-active;
+				border-color: $blue-card-tabs-active;
+				border-bottom-color: $blue-card-tabs-active;
+			}
+
+			.nav-tabs .nav-item .nav-link:hover {
+				border: 1px solid transparent;
+			}
+
+			.card-body {
+				background-color: $blue-card-tabs-active;
+			}
+		}
+	}
+
+}

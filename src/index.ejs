@@ -9,8 +9,7 @@
 
     <title><%= htmlWebpackPlugin.options.title %></title>
 
-    <% for (var css in htmlWebpackPlugin.files.css) { %><link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-    <% } %>
+    <link rel="stylesheet" href="assets/css/app.css">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
 </head>
@@ -86,8 +85,7 @@
 
     </div> <!-- END WRAPPER -->
 
-    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %><script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-    <% } %>
+    <script src="assets/scripts/app.js"></script>
 </body>
 
 </html>

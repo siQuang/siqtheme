@@ -1,0 +1,177 @@
+$sidebar-pinned-width:80px;
+$sidebar-brand-height:55px;
+$sidebar-footer-height:35px;
+
+.sidebar-wrapper {
+    grid-area: sidebar;
+    color: $default-sidebar-font-color;
+    background-color: $default-sidebar-bg-color;
+    border-top-left-radius: $main-body-radius;
+    border-bottom-left-radius: $main-body-radius;
+    // width: $sidebar-width;
+    // height: 100%;
+    // max-height: 100%;
+    // position: relative;
+    // top: 0;
+    // left: -$sidebar-width;
+    // left: 0;
+    // z-index: 999;
+    // transition: left .3s ease, width .3s ease;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        color: $default-sidebar-font-color;
+        text-decoration: none;
+        transition: color .3s ease;
+
+        &:hover {
+            color: darken($default-sidebar-font-color, 60%);
+        }
+    }
+
+    // .sidebar-item {
+    //     transition: all .3s linear;
+    // }
+
+    // .sidebar-content {
+    //     max-height: 100%;
+    //     height: 100%;
+    //     overflow-y: scroll;
+    //     position: relative;
+
+    //     &.desktop {
+    //         overflow-y: hidden;
+    //     }
+    // }
+
+    // .badge {
+    //     border-radius: 0;
+    // }
+
+    .sidebar-menu {
+        padding-bottom: 10px;
+
+        .header-menu span {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 15px 20px 5px 20px;
+            display: inline-block;
+        }
+
+        ul li a {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            text-decoration: none;
+            position: relative;
+            padding: 8px 30px 8px 20px;
+            width: 100%;
+
+            &:hover > i::before {
+                display: inline-block;
+                animation: swing ease-in-out .5s 1 alternate;
+            }
+
+            i {
+                margin-right: 10px;
+                font-size: 1.4em;
+                line-height: 1.4em;
+                text-align: center;
+                flex-shrink: 0;
+            }
+
+            .menu-text {
+                flex-grow: 1;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                flex-shrink: 1;
+                overflow: hidden;
+            }
+        }
+
+        .sidebar-dropdown {
+            > a:after {
+                font-family: "FontAwesome";
+                font-weight: 900;
+                content: "\f105";
+                display: inline-block;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-align: center;
+                background: 0 0;
+                position: absolute;
+                right: 15px;
+                top: 14px;
+                @include transition(transform 0.3s ease);
+
+            }
+
+            .sidebar-submenu {
+                visibility: hidden; /* hide sub-menu */
+                max-height: 0px;
+                opacity: 0;
+                @include transition(all 0.5s ease);
+
+                ul {
+                    padding: 5px 0;
+                }
+
+                li {
+                    padding-left: 25px;
+                    font-size: 13px;
+
+                    a {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        &:before {
+                            content: "\f10c";
+                            font-family: "FontAwesome";
+                            font-weight: 400;
+                            font-style: normal;
+                            display: inline-block;
+                            text-align: center;
+                            text-decoration: none;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            margin-right: 10px;
+                            font-size: .75em;
+                        }
+
+                        .badge,
+                        .label {
+                            margin-left: auto;
+                        }
+                    }
+
+                    &.active {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            &.active {
+                .sidebar-submenu {
+                    visibility: visible; /* shows sub-menu */
+                    max-height: 1000px;
+                    opacity: 1;
+                }
+            }
+
+            &.active > a:after {
+                transform: rotate(90deg);
+                right: 15px;
+            }
+        }
+
+    }
+}

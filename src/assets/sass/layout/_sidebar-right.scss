@@ -1,0 +1,75 @@
+#sidebar-right {
+    position: fixed;
+    top: $header-height;
+    right: $sidebar-right-offset;
+    bottom: 0;
+    width: $sidebar-right-width;
+    background: $default-sidebar-right-bg-color;
+    box-shadow: $default-sidebar-right-box-shadow;
+    overflow-x: hidden;
+    z-index: $zindex-sidebar-right;
+    @include transition(all 0.3s ease);
+
+    &.sidebar-open {
+        right: $grid-wrapper-x-margin;
+    }
+
+    .sidebar-right-container {
+        ul.nav-tabs {
+            border: none;
+
+            li {
+                width: 33.3333%;
+                text-align: center;
+                margin-bottom: 0;
+
+                a {
+                    border: none;
+                    border-radius: 0;
+                    border-right: 1px solid $default-sidebar-right-tab-active-bg;
+
+                    &:not(.active) {
+                        color: $default-sidebar-right-tabs-font;
+                        background: $default-sidebar-right-tabs-bg;
+                    }
+
+                    &.active {
+                        color: $default-sidebar-right-tabs-font;
+                        font-weight: 700;
+                        background: $default-sidebar-right-tab-active-bg;
+                    }
+                }
+
+                &:last-child a {
+                    border-right: 0;
+                }
+            }
+        }
+
+        > .tab-content {
+            
+            .pane-header {
+                padding: 20px;
+                color: $default-sidebar-right-pane-header-font;
+                min-height: 100px;
+                background: $default-sidebar-right-tab-active-bg;
+            }
+
+            .pane-body {
+                // padding: 20px;
+
+                .message-group {
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 8px;
+                    }
+
+                    .message-item {
+                        // display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -38,6 +38,8 @@ mix.js('src/assets/scripts/app.js', 'assets/scripts/')
        proxy: 'siqtheme.test',
        files: ['public/**/*.html', 'public/assets/css/**/*.css', 'public/assets/scripts/**/*.js']
    })
+   .copyDirectory('src/assets/img', 'public/assets/img')
+   .copyDirectory('src/assets/fonts', 'public/assets/fonts')
    .webpackConfig({
        output: {
            path: path.resolve(__dirname, 'public')
@@ -64,6 +66,9 @@ mix.js('src/assets/scripts/app.js', 'assets/scripts/')
                })
            })
        ]
+   })
+   .options({
+       processCssUrls: false
    });
 
 // Full API

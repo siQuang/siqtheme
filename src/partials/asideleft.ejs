@@ -6,27 +6,11 @@
                         <li class="header-menu">
                             <span>Categories</span>
                         </li>
-                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'db') { %>active<% } %>">
-                            <a href="#">
+                        <li class="<% if (htmlWebpackPlugin.options.topmenu == 'db') { %>active<% } %>">
+                            <a href="index.html">
                                 <i class="ti-dashboard"></i>
                                 <span class="menu-text">Dashboard</span>
-                                <span class="badge badge-pill badge-warning">New</span>
                             </a>
-                            <div class="sidebar-submenu">
-                                <ul>
-                                    <li <% if (htmlWebpackPlugin.options.submenu == 'dashboard1') { %>class="active"<% } %>>
-                                        <a href="index.html">Dashboard 1
-                                            <span class="badge badge-pill badge-success">Pro</span>
-                                        </a>
-                                    </li>
-                                    <li <% if (htmlWebpackPlugin.options.submenu == 'dashboard2') { %>class="active" <% } %>>
-                                        <a href="index2.html">Dashboard 2</a>
-                                    </li>
-                                    <li <% if (htmlWebpackPlugin.options.submenu == 'dashboard3') { %>class="active" <% } %>>
-                                        <a href="index3.html">Dashboard 3</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'cp') { %>active<% } %>">
                             <a href="#">

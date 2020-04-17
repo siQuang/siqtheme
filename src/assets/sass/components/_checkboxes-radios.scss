@@ -1,0 +1,63 @@
+// ---------------------------------------------
+// Custom checkboxes and radios
+// ---------------------------------------------
+.form-checkbox,
+.form-radio {
+    label:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    > label {
+        margin-top: 4px;
+
+        > input[type="checkbox"],
+        > input[type="radio"] {
+            display: none;
+        }
+
+        .checkmark, 
+        .radiomark {
+            position: relative;
+            display: inline-block;
+            border: 1px solid $color-gray-500;
+            width: 1.3em;
+            height: 1.3em;
+            float: left;
+            margin-right: .5em;
+            margin-top: 2px;
+
+            > i {
+                position: absolute;
+                font-size: .8em;
+                line-height: 0;
+                top: 50%;
+                left: 20%;
+            }
+        }
+
+        .radiomark {
+            border-radius: 50%;
+        }
+
+        > input[type="checkbox"] + .checkmark > i, 
+        > input[type="radio"] + .radiomark > i {
+            transform: scale(3) rotateZ(-20deg);
+            opacity: 0;
+            transition: all .3s ease-in;
+        }
+
+        > input[type="checkbox"]:checked + .checkmark > i, 
+        > input[type="radio"]:checked + .radiomark > i {
+            transform: scale(1) rotateZ(0deg);
+            opacity: 1;
+        }
+
+        > input[type="checkbox"]:disabled + .checkmark, 
+        > input[type="radio"]:disabled + .radiomark {
+            // opacity: .5;
+            background: $color-gray-200;
+        }
+    }
+}

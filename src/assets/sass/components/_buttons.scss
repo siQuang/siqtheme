@@ -1,0 +1,23 @@
+.btn {
+    box-shadow: none !important;
+
+    &.btn-flat {
+    	border-radius: 0 !important;
+    }
+
+    &.btn-round {
+    	border-radius: 1.2em !important;
+    }
+}
+
+.btn-group-flat {
+	.btn {
+		border-radius: 0;
+	}
+}
+
+.btn-group-round {
+	.btn {
+		border-radius: 1.2em;
+	}
+}

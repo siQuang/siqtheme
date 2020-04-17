@@ -1,0 +1,10 @@
+// ---------------------------------------------
+// bootstrap 4 toggle
+// ---------------------------------------------
+.speed-slow .toggle-group {
+    @include transition(left 0.7s);
+}
+
+.speed-fast .toggle-group {
+    @include transition(left 0.1s);
+}

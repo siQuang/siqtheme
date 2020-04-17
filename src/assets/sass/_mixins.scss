@@ -1,0 +1,31 @@
+@mixin transition($transition) {
+	-webkit-transition: #{$transition};
+	-moz-transition: #{$transition};
+	-ms-transition: #{$transition};
+	-o-transition: #{$transition};
+	transition: #{$transition};
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+	    @content;
+	}
+	@-moz-keyframes #{$animation-name} {
+	    @content;
+	}  
+	@-ms-keyframes #{$animation-name} {
+	    @content;
+	}
+	@-o-keyframes #{$animation-name} {
+	    @content;
+	}  
+	@keyframes #{$animation-name} {
+	    @content;
+	}
+}
+
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}

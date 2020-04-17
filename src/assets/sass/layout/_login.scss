@@ -1,0 +1,14 @@
+.login-container {
+	height: 100%;
+	align-content: center;
+
+	.card {
+		margin-top: 15%;
+		margin-bottom: auto;
+		width: 400px;
+	}
+
+	#forget-card {
+		display: none;
+	}
+}

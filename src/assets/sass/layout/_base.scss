@@ -1,0 +1,135 @@
+html, body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    // color: $default-font-color;
+    // background: $default-background-color;
+    height: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+a {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+// error color for input, select, textarea
+input.error,
+select.error,
+textarea.error,
+label.error {
+    color: $red;
+}
+
+// swing animation
+@include keyframes(swing) {
+    10% { transform: rotate(10deg); }
+    40% { transform: rotate(-20deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-10deg); }
+}
+
+// pulse animation
+@include keyframes(pulse) {
+    0% { opacity: 1; transform: scale(0) }
+    100% { opacity: 0; transform: scale(1) }
+}
+
+/* wrapper */
+.grid-wrapper {
+    display: grid;
+    // height: 100%; // sticky footer
+    margin: $grid-wrapper-y-margin $grid-wrapper-x-margin;
+    grid-template-columns: $sidebar-width auto;
+    grid-template-rows: $header-height auto $footer-height;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+    // overflow: hidden;
+
+    // .sidebar-content {
+    //     width: $sidebar-width;
+    //     transition: all 0.5s ease;
+    // }
+
+    &.collapsed:not(.sidebar-hovered) {
+        grid-template-columns: $sidebar-collapsed-width auto;
+
+        .sidebar {
+            // .sidebar-content {
+            //     width: $sidebar-collapsed-width;
+            //     transition: all 0.5s ease;
+            // }
+
+            .sidebar-menu .header-menu,
+            .sidebar-menu .sidebar-submenu,
+            .sidebar-menu ul > li > a > span,
+            .sidebar-menu ul > li > a::after {
+                display: none !important;
+            }
+
+            .sidebar-menu ul > li > a > i {
+                font-size: 1.7em;
+            }
+        }
+
+    }
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: $zindex-sidebar-right - 1;
+}
+
+// ui colors
+.colors > .card {
+    min-width: 120px;
+
+    > .card-body {
+        min-height: 100px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    @each $name, $color in $siqtheme-colors {
+        > .card-body.bg-#{$name} {
+            color: color-yiq($color);
+        }
+    }
+
+    > .card-footer {
+        text-align: center;
+    }
+}
+
+// webfont layout
+.webfont {
+    display: block;
+    padding: 10px;
+
+    > i {
+        font-size: 18px;
+        padding-right: 5px;
+    }
+}

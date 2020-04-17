@@ -1,0 +1,39 @@
+ // Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+@import "variables";
+@import "mixins";
+@import "functions";
+
+// Layout
+@import "layout/login";
+@import "layout/base";
+@import "layout/header";
+@import "layout/sidebar";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/sidebar-right";
+
+// Overrides
+@import "overrides/bootstrap";
+@import "overrides/datatables";
+@import "overrides/select2";
+@import "overrides/chartist";
+@import "overrides/summernote";
+
+// Components
+@import "components/cards";
+@import "components/buttons";
+@import "components/forms";
+@import "components/checkboxes-radios";
+@import "components/switches";
+@import "components/modals";
+@import "components/alerts";
+
+// Themes
+@import "themes/default";
+@import "themes/dark";
+@import "themes/blue";
+
+// Media
+@import "media";

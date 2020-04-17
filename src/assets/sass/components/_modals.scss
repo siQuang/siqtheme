@@ -1,0 +1,49 @@
+.modal-content {
+	border-radius: $main-body-radius;
+
+	.modal-header {
+		padding: 1.5rem;
+	}
+
+	.modal-body {
+		padding: 1.5rem;
+	}
+
+	.modal-footer {
+		padding: 1rem 1.5rem;
+	}
+}
+
+.siqmodal {
+	.modal-body {
+		background: $color-gray-100;
+	}
+}
+
+@each $name, $color in $siqtheme-colors {
+    .modal.modal-#{$name} {
+	     .modal-content {
+		        color: color-yiq($color) !important;
+		        background: $color;
+
+		        .modal-header {
+		        	border-bottom-color: darken($color, 4%);
+
+		        	.close {
+						color: color-yiq($color);
+						text-shadow: none;
+					}
+		        }
+
+		        .modal-body {
+		        	.form-control-plaintext {
+		        		color: color-yiq($color);
+		        	}
+		        }
+
+		        .modal-footer {
+		        	border-top-color: darken($color, 4%);
+		        }
+	    }
+    }
+}

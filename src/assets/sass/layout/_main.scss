@@ -1,0 +1,7 @@
+.main {
+	grid-area: main;
+    background-color: $default-main-bg-color;
+    border-top-right-radius: $main-body-radius;
+    border-bottom-right-radius: $main-body-radius;
+    padding: 16px;
+}
