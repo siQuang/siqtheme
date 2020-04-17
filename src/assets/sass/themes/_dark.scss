@@ -2,6 +2,10 @@ body.theme-dark {
 	color: $dark-font-color;
 	background: $dark-background-color;
 
+	hr {
+		border-top-color: rgba(73, 80, 87, 1);
+	}
+
 	// ---------------------------------------------
 	// Header
 	// ---------------------------------------------
@@ -163,7 +167,7 @@ body.theme-dark {
 	.custom-file-label {
 		color: $color-gray-400;
 		background: $color-gray-800;
-		border-color: $color-black;
+		border-color: $color-gray-700;
 
 		&:focus {
 			color: $color-gray-400;
@@ -214,7 +218,7 @@ body.theme-dark {
 		.input-group-text {
 			color: $color-gray-300;
 			background: $color-gray-700;
-			border-color: $color-black;
+			border-color: $color-gray-700;
 		}
 	}
 
@@ -261,8 +265,11 @@ body.theme-dark {
 	// ---------------------------------------------
 	.card {
 		background: $dark-card-bg;
+		border-color: rgba(73, 80, 87, 1);
 
 		.card-header {
+			border-bottom-color: rgba(73, 80, 87, 1);
+
 			.caption {
 				color: $dark-card-header-font;
 			}
@@ -285,9 +292,19 @@ body.theme-dark {
 				background-color: $dark-card-tabs-active;
 			}
 		}
+
+		.card-footer {
+			border-top-color: rgba(73, 80, 87, 1);
+		}
+
+		.list-group {
+			.list-group-item {
+				border-color: rgba(73, 80, 87, 1);
+			}
+		}
 	}
 
-	@each $name, $color in $siqtheme-colors {
+	@each $name, $color in $theme-colors {
 	    .card.card-#{$name} {
 	        color: color-yiq($color) !important;
 	        border-color: darken($color, 5%);
@@ -307,7 +324,7 @@ body.theme-dark {
 		background-color: $color-gray-800;
 
 		.modal-header {
-			border-bottom-color: darken($color-gray-800, 4%);
+			border-bottom-color: $color-gray-700;
 
 			.close {
 				color: $dark-font-color;
@@ -320,7 +337,122 @@ body.theme-dark {
 		// }
 
 		.modal-footer {
-			border-top-color: darken($color-gray-800, 4%);
+			border-top-color: $color-gray-700;
+		}
+	}
+
+	// ---------------------------------------------
+	// Tables
+	// ---------------------------------------------
+	.table-bordered {
+		border-color: $color-gray-700;
+	}
+
+	.table .thead-light th {
+		color: $color-gray-400;
+		background-color: $color-gray-800;
+	}
+
+	.table-bordered th,
+	.table-bordered td {
+		border-color: $color-gray-700;
+	}
+
+	.table tr.void.bg-light {
+		background-color: $color-gray-800 !important;
+	}
+
+	// ---------------------------------------------
+	// Borders
+	// ---------------------------------------------
+	.border,
+	.border-top,
+	.border-right,
+	.border-bottom,
+	.border-left {
+		border-color: $color-gray-800 !important;
+	}
+
+	// ---------------------------------------------
+	// Select2
+	// ---------------------------------------------
+	.select2-container--default,
+	.select2-selection--multiple {
+		background-color: transparent;
+		border-color: $color-gray-700;
+	}
+
+	.select2-container {
+		.select2-dropdown {
+			background-color: $color-gray-800;
+			border-color: $color-gray-700;
+		}
+	}
+
+	.select2-selection__rendered .select2-selection__choice {
+		background-color: $color-gray-700;
+	}
+
+	.select2-results {
+		.select2-results__option[aria-selected=true] {
+			background-color: $color-gray-700;
+		}
+	}
+
+	// ---------------------------------------------
+	// Summernote
+	// ---------------------------------------------
+	.note-editor {
+		&.note-frame {
+			border-color: $color-gray-700;
+
+			* {
+				color: $color-gray-300;
+			}
+		}
+
+		.note-toolbar {
+			border-bottom-color: $color-gray-700;
+			background-color: $color-gray-800;
+
+			.note-btn {
+				background-color: $color-gray-600;
+				border-color: $color-gray-800;
+			}
+		}
+
+		.note-editing-area {
+			.note-editable {
+				background-color: $color-gray-900;
+			}
+		}
+
+		output.note-status-output {
+			border-top-color: $color-gray-700;
+		}
+
+		.note-statusbar {
+			border-top-color: $color-gray-700;
+			background-color: $color-gray-900;
+		}
+
+		.note-dropdown-menu {
+			border-color: $color-gray-900;
+			background-color: $color-gray-800;
+
+			a.note-dropdown-item:hover {
+				background-color: $color-gray-900;
+			}
+
+			.note-palette {
+				button.btn {
+					background-color: $color-gray-900;
+
+					&:hover {
+						background-color: $color-gray-700;
+					}
+				}
+			}
 		}
 	}
 

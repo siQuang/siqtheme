@@ -1,61 +1,16 @@
 // ---------------------------------------------
-// Colors
+// Grid Layout
 // ---------------------------------------------
-@import "colors";
-
-$siqtheme-colors: (
-	"primary":    $blue,
-	"secondary":  $color-gray-600,
-	"success":    $green,
-	"info":       $cyan,
-	"warning":    $yellow,
-	"danger":     $red,
-	"light":      $color-gray-200,
-	"dark":       $color-gray-800,
-	"chili":      $chili,
-	"imperial":   $imperial,
-	"salmon":     $salmon,
-	"rose":       $rose,
-	"bubblegum":  $bubblegum,
-	"taffy":      $taffy,
-	"pumpkin":    $pumpkin,
-	"apricot":    $apricot,
-	"honey":      $honey,
-	"tuscany":    $tuscany,
-	"mustard":    $mustard,
-	"lemon":      $lemon,
-	"grape":      $grape,
-	"orchid":     $orchid,
-	"lilac":      $lilac,
-	"sapphire":   $sapphire,
-	"azure":      $azure,
-	"carolina":   $carolina,
-	"forest":     $forest,
-	"jade":       $jade,
-	"lime":       $lime,
-	"coffee":     $coffee,
-	"caramel":    $caramel,
-	"tortilla":   $tortilla
-);
-
-// ---------------------------------------------
-// Fonts
-// Font, line-height, and color for body text, headings, and more.
-// ---------------------------------------------
-$font-family-base:          "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-base:            0.95rem !default; // Assumes the browser default, typically `16px`
-
-// ---------------------------------------------
-// Dynamic Font Color
-// The yiq lightness value that determines when 
-// the lightness of color changes from "dark" to "light". 
-// Acceptable values are between 0 and 255.
-// ---------------------------------------------
-$yiq-contrasted-threshold:  200 !default;
-
-// Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $color-gray-600 !default;
-$yiq-text-light:            $color-gray-100 !default;
+$grid-wrapper-x-margin: 	16px !default;
+$grid-wrapper-y-margin: 	0 !default;
+$header-height: 			74px !default;
+$header-width: 				calc(100% - 32px) !default; // For fixed header
+$sidebar-width: 			260px !default;
+$sidebar-collapsed-width: 	60px !default;
+$main-body-radius: 			5px !default;
+$footer-height: 			42px !default;
+$sidebar-right-width: 		360px !default;
+$sidebar-right-offset: 		-370px !default;
 
 // ---------------------------------------------
 // Screen Size
@@ -70,32 +25,14 @@ $screen-sm-max: ($screen-sm-min - 1) !default;
 $screen-md-max: ($screen-md-min - 1) !default;
 $screen-lg-max: ($screen-lg-min - 1) !default;
 
-//------------------- Image Path
-$layout-img-path: '../img/' !default;
-
-
 // ---------------------------------------------
 // z-indexs
 // ---------------------------------------------
-$zindex-sidebar: 10 !default; 
-$zindex-sidebar-slide: 12 !default; 
-$zindex-note-editor: 20 !default; 
-$zindex-sidebar-right: 99 !default; 
-$zindex-header: 100 !default;
-
-// ---------------------------------------------
-// Grid Layout
-// ---------------------------------------------
-$grid-wrapper-x-margin: 	16px !default;
-$grid-wrapper-y-margin: 	0 !default;
-$header-height: 			74px !default;
-$header-width: 				calc(100% - 32px) !default; // For fixed header
-$sidebar-width: 			260px !default;
-$sidebar-collapsed-width: 	60px !default;
-$main-body-radius: 			5px !default;
-$footer-height: 			42px !default;
-$sidebar-right-width: 		360px !default;
-$sidebar-right-offset: 		-370px !default;
+$zindex-sidebar: 		10 !default; 
+$zindex-sidebar-right: 	11 !default; 
+$zindex-sidebar-slide: 	12 !default; 
+$zindex-note-editor: 	20 !default; 
+$zindex-header: 		21 !default;
 
 // ---------------------------------------------
 // Default Theme
@@ -166,7 +103,7 @@ $dark-sidebar-right-tabs-font: 				$color-gray-200 !default;
 $dark-sidebar-right-pane-header-font: 		$color-gray-500 !default;
 $dark-sidebar-right-tabs-bg: 				$color-gray-600 !default;
 $dark-sidebar-right-tab-active-bg: 			$color-gray-800 !default;
-$dark-sidebar-right-bg-color: 				$color-gray-700 !default;
+$dark-sidebar-right-bg-color: 				$color-gray-900 !default;
 $dark-sidebar-right-box-shadow: 			none !default;
 
 // Footer

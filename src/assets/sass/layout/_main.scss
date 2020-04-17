@@ -5,3 +5,35 @@
     border-bottom-right-radius: $main-body-radius;
     padding: 16px;
 }
+
+#widget-mini {
+	position: fixed;
+	top: $header-height + 5;
+	right: -122px;
+	background-color: $honey;
+	color: $color-white;
+	padding: 10px;
+	// cursor: pointer;
+	border-top-left-radius: $main-body-radius;
+	border-bottom-left-radius: $main-body-radius;
+	z-index: $zindex-sidebar-right - 1;
+	@include transition(all 0.3s ease);
+
+	a {
+		color: $color-white;
+	}
+
+	&:hover {
+		background-color: darken($honey, 5%);
+	}
+
+	i {
+		font-size: 1.5em;
+		padding-right: 12px;
+	}
+
+	&.expand {
+		right: 0;
+		@include transition(all 0.3s ease);
+	}
+}

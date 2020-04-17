@@ -15,12 +15,31 @@
 }
 
 .siqmodal {
+	.modal-header {
+		display: table !important;
+		width: 100%;
+		text-align: center;
+
+		i {
+			display: block;
+			font-size: 4em;
+		}
+
+		button.close {
+			margin-top: -5em;
+		}
+	}
 	.modal-body {
-		background: $color-gray-100;
+		
+	}
+
+	.modal-footer {
+		display: table;
+		width: 100%;
 	}
 }
 
-@each $name, $color in $siqtheme-colors {
+@each $name, $color in $theme-colors {
     .modal.modal-#{$name} {
 	     .modal-content {
 		        color: color-yiq($color) !important;

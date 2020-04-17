@@ -69,6 +69,14 @@
                         // display: inline-block;
                     }
                 }
+
+                .faq-options {
+                    display: none;
+
+                    &.show {
+                        display: block;
+                    }
+                }
             }
         }
     }

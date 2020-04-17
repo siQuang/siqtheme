@@ -1,14 +1,49 @@
-.login-container {
-	height: 100%;
-	align-content: center;
+.login-wrapper {
+    height: 100%;
+    margin: 0;
 
-	.card {
-		margin-top: 15%;
-		margin-bottom: auto;
-		width: 400px;
-	}
+    .logo,
+    .copyright {
+        border: none;
+        background: transparent;
+        text-align: center;
+    }
 
-	#forget-card {
-		display: none;
-	}
+    .logo h1 {
+    	font-weight: 400;
+    }
+
+    .copyright > .card-body {
+        padding: 0;
+        font-size: .85rem;
+    }
+
+    .card {
+        width: 400px;
+        margin: 0 auto;
+        float: none;
+        margin-bottom: 10px;
+
+        .card-top {
+		    font-size: 1.5rem;
+		    text-align: center;
+
+		    i {
+		    	display: block;
+				font-size: 4.5rem;
+		    }
+		}
+    }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    .login-wrapper {
+        .card {
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+            background: transparent;
+            border: none;
+        }
+    }
 }

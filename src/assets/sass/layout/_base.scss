@@ -28,6 +28,10 @@ a {
     font-weight: 700;
 }
 
+.strikethrough {
+    text-decoration: line-through;
+}
+
 // error color for input, select, textarea
 input.error,
 select.error,
@@ -112,7 +116,7 @@ label.error {
         text-transform: uppercase;
     }
 
-    @each $name, $color in $siqtheme-colors {
+    @each $name, $color in $theme-colors {
         > .card-body.bg-#{$name} {
             color: color-yiq($color);
         }
@@ -120,6 +124,24 @@ label.error {
 
     > .card-footer {
         text-align: center;
+    }
+}
+
+// color palettes
+.event-color-container {
+    .event-color {
+        float: left;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 5px;
+        cursor: pointer;
+
+        &.selected {
+            width: 30px;
+            height: 30px;
+            margin-top: -5px;
+        }
     }
 }
 

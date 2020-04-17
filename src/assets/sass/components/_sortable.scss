@@ -1,0 +1,26 @@
+.widget-sortable {
+	&.sortable-top {
+		.card-sortable-placeholder {
+			border: 2px dotted #CCCCCC;
+			margin-left: 16px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&.sortable-main {
+		.card-sortable-placeholder {
+			border: 2px dotted #CCCCCC;
+			margin-bottom: 20px;
+		}
+	}
+
+	.sortable-handle {
+		cursor: move;
+	}
+
+	.card-sortable-spacer {
+		height: 0px;
+		border: none;
+		background: transparent;
+	}
+}

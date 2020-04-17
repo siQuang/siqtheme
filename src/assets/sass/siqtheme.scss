@@ -1,6 +1,6 @@
-// Google Fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-
+// ---------------------------------------------
+// Vendors
+// ---------------------------------------------
 // Bootstrap
 @import 'bootstrap/bootstrap';
 
@@ -15,11 +15,11 @@
 // Toastr
 @import '~toastr/toastr.scss';
 
+// ---------------------------------------------
 // siQtheme
-//-------------------------------------
+// ---------------------------------------------
 @import "variables";
 @import "mixins";
-@import "functions";
 
 // Layout
 @import "layout/login";
