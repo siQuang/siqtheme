@@ -3,7 +3,7 @@ require("popper.js");
 require("bootstrap");
 require("toastr/toastr");
 
-const siQtheme = function () {
+const siQapp = function () {
 
     // handle theme switch
     var handleThemeColor = function () {
@@ -143,5 +143,5 @@ const siQtheme = function () {
 }();
 
 $(function () {
-    siQtheme.init();
+    siQapp.init();
 });

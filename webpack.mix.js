@@ -18,6 +18,12 @@ const pages = [
         filename: "index.html",
         topmenu: "db",
         submenu: "dashboard1"
+    }, {
+        title: "siQtheme - UI Buttons",
+        template: "src/ui_buttons.ejs",
+        filename: "ui_buttons.html",
+        topmenu: "ui",
+        submenu: "uibutton",
     }
 ];
 
