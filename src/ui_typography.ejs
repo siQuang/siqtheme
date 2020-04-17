@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href=""><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="">UI Elements</a></li>
+                        <li class="breadcrumb-item active">Typography</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Headings
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h1>h1. Heading 1</h1>
+                            <h2>h2. Heading 2</h2>
+                            <h3>h3. Heading 3</h3>
+                            <h4>h4. Heading 4</h4>
+                            <h5>h5. Heading 5</h5>
+                            <h6>h6. Heading 6</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Paragraph
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">In on announcing if of comparison pianoforte projection. Maids hoped gay yet bed
+                                asked blind dried point. On abroad danger likely regret twenty edward do. Too horrible consider
+                                followed may differed age. An rest if more five mr of. Age just her rank met down way. </p>
+                            <p class="card-text text-apricot">Sentiments two occasional affronting solicitude travelling and one
+                                contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took
+                                sold add play may none him few. If as increasing contrasted entreaties be. Now summer who day looked
+                                our behind moment coming. Pain son rose more park way that. An stairs as be lovers uneasy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Display Headings
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="display-1">Display Heading 1</h1>
+                            <h1 class="display-2">Display Heading 2</h1>
+                            <h1 class="display-3">Display Heading 3</h1>
+                            <h1 class="display-4">Display Heading 4</h1>
+                            <h1 class="display-5">Display Heading 5</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Bootstrap Text Color
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-primary">.text-primary | Guest it he tears aware as my no cold of need.</p>
+                            <p class="text-secondary">.text-secondary | He been past in by my hard thrown future.</p>
+                            <p class="text-success">.text-success | Otherwise concealed favourite frankness dashwoods.</p>
+                            <p class="text-danger">.text-danger | Sympathize interested simplicity at do projecting.</p>
+                            <p class="text-warning">.text-warning | Property men the why smallest graceful day.</p>
+                            <p class="text-info">.text-info | Inquiry justice country old placing sitting any age.</p>
+                            <p class="text-dark">.text-dark | Be is lose girl long of up give unpacked ye at he.</p>
+                            <p class="text-muted">.text-muted | In household certainty an like up be is next neat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Text Styling
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>You can use the 'mark' tag to <mark>highlight</mark> text.</p>
+                            <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                            <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                            <p><u>This line of text will render as underlined</u></p>
+                            <p><small>This line of text is meant to be treated as fine print.</small></p>
+                            <p><strong>This line rendered as bold text.</strong></p>
+                            <p><em>This line rendered as italicized text.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> siQthemes Text Color
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <p class="text-chili">.text-chili | Guest it he tears aware as my no cold of need.</p>
+                                    <p class="text-imperial">.text-imperial | He been past in by my hard thrown future.</p>
+                                    <p class="text-salmon">.text-salmon | Otherwise concealed favourite frankness dashwoods.</p>
+                                    <p class="text-rose">.text-rose | Sympathize interested simplicity at do projecting.</p>
+                                    <p class="text-bubblegum">.text-bubblegum | Property men the why smallest graceful day.</p>
+                                    <p class="text-taffy">.text-taffy | Inquiry justice country old placing sitting any age.</p>
+                                    <p class="text-pumpkin">.text-pumpkin | Be is lose girl long of up give unpacked ye at he.</p>
+                                    <p class="text-apricot">.text-apricot | In household certainty an like up be is next neat.</p>
+                                    <p class="text-honey">.text-honey | In household certainty an like up be is next neat.</p>
+                                    <p class="text-tuscany">.text-tuscany | In household certainty an like up be is next neat.</p>
+                                    <p class="text-mustard">.text-mustard | In household certainty an like up be is next neat.</p>
+                                    <p class="text-lemon">.text-lemon | In household certainty an like up be is next neat.</p>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <p class="text-grape">.text-grape | In household certainty an like up be is next neat.</p>
+                                    <p class="text-orchid">.text-orchid | In household certainty an like up be is next neat.</p>
+                                    <p class="text-lilac">.text-lilac | In household certainty an like up be is next neat.</p>
+                                    <p class="text-sapphire">.text-sapphire | In household certainty an like up be is next neat.</p>
+                                    <p class="text-azure">.text-azure | In household certainty an like up be is next neat.</p>
+                                    <p class="text-carolina">.text-carolina | In household certainty an like up be is next neat.</p>
+                                    <p class="text-forest">.text-forest | In household certainty an like up be is next neat.</p>
+                                    <p class="text-jade">.text-jade | In household certainty an like up be is next neat.</p>
+                                    <p class="text-lime">.text-lime | In household certainty an like up be is next neat.</p>
+                                    <p class="text-coffee">.text-coffee | In household certainty an like up be is next neat.</p>
+                                    <p class="text-caramel">.text-caramel | In household certainty an like up be is next neat.</p>
+                                    <p class="text-tortilla">.text-tortilla | In household certainty an like up be is next neat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Ordered Lists
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ol>
+                                <li>Believing neglected so</li>
+                                <li>In design active temper</li>
+                                <li>
+                                    Thirty for remove plenty
+                                    <ol>
+                                        <li>Maids table how learn</li>
+                                        <li>Music me house</li>
+                                        <li>Piqued our sister</li>
+                                    </ol>
+                                </li>
+                                <li>Regard you summer though</li>
+                                <li>He preference connection</li>
+                                <li>Partiality on or continuing</li>
+                                <li>Do believing oh disposing</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Unordered Lists
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Believing neglected so</li>
+                                <li>In design active temper</li>
+                                <li>
+                                    Thirty for remove plenty
+                                    <ul>
+                                        <li>Maids table how learn</li>
+                                        <li>Music me house</li>
+                                        <li>Piqued our sister</li>
+                                    </ul>
+                                </li>
+                                <li>Regard you summer though</li>
+                                <li>He preference connection</li>
+                                <li>Partiality on or continuing</li>
+                                <li>Do believing oh disposing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Unstyled Lists
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li>In design active temper</li>
+                                <li>Regard you summer though</li>
+                                <li>
+                                    Thirty for remove plenty
+                                    <ul>
+                                        <li>Maids table how learn</li>
+                                        <li>Music me house</li>
+                                    </ul>
+                                </li>
+                                <li>Do believing oh disposing</li>
+                            </ul>
+                            <h5 class="card-title">Inline Lists</h5>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">List One</li>
+                                <li class="list-inline-item">List Two</li>
+                                <li class="list-inline-item">List Three</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-header uppercase">
+                            <div class="caption text-primary">
+                                <i class="ti-briefcase"></i> Blockquotes
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-circle btn-outline-secondary"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <blockquote class="blockquote">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                                        ante.</p>
+                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                            Title</cite></footer>
+                                </blockquote>
+                            </li>
+                            <li class="list-group-item">
+                                <blockquote class="blockquote text-center">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                                        ante.</p>
+                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                            Title</cite></footer>
+                                </blockquote>
+                            </li>
+                            <li class="list-group-item">
+                                <blockquote class="blockquote text-right">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                                        ante.</p>
+                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                            Title</cite></footer>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <script src="assets/scripts/app.js"></script>
+</body>
+
+</html>
