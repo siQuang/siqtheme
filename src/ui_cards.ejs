@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="#">UI Elements</a></li>
+                        <li class="breadcrumb-item active">Cards</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Basic Card</h4>
+                            <h6 class="card-subtitle mb-2">Basic Card Subtitle</h6>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-outline-danger text-danger mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Outline Card</h4>
+                            <h6 class="card-subtitle mb-2">.card-outline-danger</h6>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-success mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Success Card</h4>
+                            <h6 class="card-subtitle mb-2">.card-success</h6>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-taffy mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Taffy Card</h4>
+                            <h6 class="card-subtitle mb-2">.card-taffy</h6>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-mustard mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Mustard Card</h4>
+                            <h6 class="card-subtitle mb-2">.card-mustard</h6>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-salmon mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title">Salmon Card</h4>
+                            <h6 class="card-subtitle mb-2">.card-salmon</h6>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="number-left">
+                                <h6 class="bold">Orders</h6>
+                                <h3 class="card-title bold text-success">$1250</h3>
+                            </div>
+                            <div class="icon-right"><i class="ti-shopping-cart"></i></div>
+                            <div class="clearfix"></div>
+                            <span class="chart1">1,3,5,7,9,8,6,4,2,1,2,3,4,5,6,7,5,4,3,2,5,8,7,6,5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card card-outline-primary mb-3">
+                        <div class="card-body">
+                            <div class="number-left">
+                                <h6 class="bold">Progress Bar</h6>
+                                <h3 class="card-title bold text-success">255</h3>
+                            </div>
+                            <div class="icon-right"><i class="ti-dashboard"></i></div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span class="float-left"><small>Start</small></span>
+                                <span class="float-right"><small>End</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card card-dark mb-3">
+                        <div class="card-body">
+                            <div class="number-left">
+                                <h6 class="bold text-secondary">Monthly Goal</h6>
+                                <h3 class="card-title text-danger bold">$7524</h3>
+                            </div>
+                            <div class="icon-right text-secondary"><span class="chart2">5,3,9,6,5,9,7,3,5,2</span></div>
+                            <div class="progress height-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress-text text-secondary">
+                                <span class="float-left"><small>$0</small></span>
+                                <span class="float-right"><small>$10,000</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="icon-left text-secondary"><i class="ti-user"></i></div>
+                            <div class="number-right text-right">
+                                <h6 class="bold text-secondary">Subscribers</h6>
+                                <h3 class="card-title text-primary bold">2450</h3>
+                            </div>
+                            <div class="progress height-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress-text text-secondary">
+                                <span class="float-left"><small>Starting</small></span>
+                                <span class="float-right"><small>Popular</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-dark mb-3">
+                        <div class="card-header">
+                            <div class="caption uppercase text-info">
+                                <i class="ti-briefcase"></i> Colored Card
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-outline-light"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-outline-light"><i class="ti-settings"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                            <a href="#" class="btn btn-primary"><i class="ti-new-window"></i> Submit</a>
+                            <a href="#" class="btn btn-secondary"><i class="ti-close"></i> Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption uppercase text-success">
+                                <i class="ti-briefcase"></i> Card Header
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-success"><i class="ti-pencil-alt"></i> Edit</a>
+                                <a href="#" class="btn btn-secondary"><i class="ti-settings"></i> Settings</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <p class="card-text">Sentiments two occasional affronting solicitude travelling and one contrasted.
+                                Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play
+                                may none him few. If as increasing contrasted entreaties be.</p>
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                            <a href="#" class="card-link">External link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption uppercase text-danger">
+                                <i class="ti-briefcase"></i> Card Header
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-primary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-secondary"><i class="ti-settings"></i></a>
+                                <a href="#" class="btn btn-success" data-toggle="dropdown"><i class="ti-user"></i> Users <i
+                                        class="ti-arrow-circle-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">list-group list-group-flush</li>
+                            <li class="list-group-item">list-group list-group-flush</li>
+                        </ul>
+                        <div class="card-body">
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                            <a href="#" class="btn btn-primary"><i class="ti-new-window"></i> Submit</a>
+                            <a href="#" class="btn btn-secondary"><i class="ti-close"></i> Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption uppercase text-info">
+                                <i class="ti-briefcase"></i> Card List Group
+                            </div>
+                            <div class="tools">
+                                <a href="#" class="btn btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="ti-settings"></i></a>
+                                <a href="#" class="btn btn-info" data-toggle="dropdown">Dropdown <i
+                                        class="ti-arrow-circle-down"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">list-group list-group-flush</li>
+                            <li class="list-group-item">list-group list-group-flush</li>
+                            <li class="list-group-item">list-group list-group-flush</li>
+                            <li class="list-group-item">list-group list-group-flush</li>
+                            <li class="list-group-item">list-group list-group-flush</li>
+                            <li class="list-group-item">list-group list-group-flush</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-secondary mb-3">
+                        <img src="https://images.unsplash.com/photo-1550199453-ebdcdb13216b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card With Image Top</h5>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                        <div class="card-footer text-right">
+                            <a href="#" class="btn btn-primary"><i class="ti-new-window"></i> Submit</a>
+                            <a href="#" class="btn btn-secondary"><i class="ti-close"></i> Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption uppercase text-warning">
+                                <i class="ti-briefcase"></i> Card Image Bottom
+                            </div>
+                            <div class="tools">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#"><i class="ti-hand-point-left"></i></a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#"><i class="ti-hand-point-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Image Bottom With Pagination</h5>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1550154198-a6a53f804c1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                            class="card-img-top" alt="...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-dark mb-3">
+                        <img src="https://images.unsplash.com/photo-1550156005-35a69d052b38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+                            class="card-img-top" alt="...">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Card With Image Background</h4>
+                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the utility
+                                postage on top of a south. A trilogy coasts across a floppy connector. The piano sacks the stable
+                                socket inside the handler. The spike multiplies beside the crazy scroll.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-tabs mb-3">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a href="#tab1" data-toggle="tab" class="nav-link active">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tab2" data-toggle="tab" class="nav-link">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tab3" data-toggle="tab" class="nav-link">Settings</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="tab1">
+                                    <h4 class="card-title">Home</h4>
+                                    <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
+                                        utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
+                                        sacks the stable socket inside the handler. The spike multiplies beside the crazy scroll.
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="tab2">
+                                    <h4 class="card-title">Profile</h4>
+                                    <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
+                                        utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
+                                        sacks the stable socket inside the handler. The spike multiplies beside the crazy scroll.
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="tab3">
+                                    <h4 class="card-title">Settings</h4>
+                                    <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
+                                        utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
+                                        sacks the stable socket inside the handler. The spike multiplies beside the crazy scroll.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card card-tabs-pills mb-3">
+                        <div class="card-header">
+                            <ul class="nav nav-pills card-header-pills">
+                                <li class="nav-item">
+                                    <a href="#tab4" data-toggle="tab" class="nav-link active">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tab5" data-toggle="tab" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#tab6" data-toggle="tab" class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="tab4">
+                                    <h4 class="card-title">Active</h4>
+                                    <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
+                                        utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
+                                        sacks the stable socket inside the handler. The spike multiplies beside the crazy scroll.
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="tab5">
+                                    <h4 class="card-title">About</h4>
+                                    <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
+                                        utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
+                                        sacks the stable socket inside the handler. The spike multiplies beside the crazy scroll.
+                                    </p>
+                                </div>
+                                <div class="tab-pane fade" id="tab6">
+                                    <h4 class="card-title">Contact</h4>
+                                    <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
+                                        utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
+                                        sacks the stable socket inside the handler. The spike multiplies beside the crazy scroll.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <script src="assets/scripts/app.js"></script>
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="assets/scripts/pages/ui_card.js"></script>
+</body>
+
+</html>

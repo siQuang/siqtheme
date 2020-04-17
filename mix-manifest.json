@@ -1,4 +1,5 @@
 {
     "/assets/scripts/app.js": "/assets/scripts/app.js",
-    "/assets/css/app.css": "/assets/css/app.css"
+    "/assets/css/app.css": "/assets/css/app.css",
+    "/assets/scripts/pages/ui_card.js": "/assets/scripts/pages/ui_card.js"
 }

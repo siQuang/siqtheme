@@ -27,5 +27,11 @@ module.exports = [
         filename: "ui_typography.html",
         topmenu: "ui",
         submenu: "uitypo"
+    }, {
+        title: "siQtheme - UI Cards",
+        template: "src/ui_cards.ejs",
+        filename: "ui_cards.html",
+        topmenu: "ui",
+        submenu: "uicard",
     }
 ];
