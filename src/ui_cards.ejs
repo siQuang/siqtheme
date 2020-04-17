@@ -9,10 +9,7 @@
 
     <title><%= htmlWebpackPlugin.options.title %></title>
 
-    <link rel="stylesheet" href="assets/css/app.css">
-
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <% include src/partials/styles.ejs %>
 </head>
 
 <body class="theme-dark">
@@ -456,7 +453,7 @@
 
     </div> <!-- END WRAPPER -->
 
-    <script src="assets/scripts/app.js"></script>
+    <% include src/partials/scripts.ejs %>
 
     <!-- PAGE LEVEL SCRIPTS -->
     <script src="assets/scripts/pages/ui_card.js"></script>

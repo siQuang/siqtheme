@@ -4,7 +4,7 @@
   "author": "siQuang (Simon Nguyen)",
   "license": "MIT",
   "description": "Responsive admin template with Webpack Mix and Bootstrap 4",
-  "main": "app.js",
+  "main": "siqtheme.js",
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",

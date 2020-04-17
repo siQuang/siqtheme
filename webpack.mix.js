@@ -13,8 +13,8 @@ const pages = require('./pages');
  |
  */
 
-mix.sass('src/assets/sass/app.scss', 'assets/css/')
-   .js('src/assets/scripts/app.js', 'assets/scripts/')
+mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
+   .js('src/assets/scripts/siqtheme.js', 'assets/scripts/')
    .js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages/ui_card.js')
    .browserSync({
        proxy: 'siqtheme.test',
