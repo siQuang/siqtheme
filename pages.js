@@ -39,5 +39,11 @@ module.exports = [
         filename: "ui_colors.html",
         topmenu: "ui",
         submenu: "uicolor"
+    }, {
+        title: "siQtheme - DataTables",
+        template: "src/tb_datatables.ejs",
+        filename: "tb_datatables.html",
+        topmenu: "tb",
+        submenu: "tbdatatables"
     }
 ];

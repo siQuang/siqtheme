@@ -1,6 +1,8 @@
 window.jQuery = window.$ = require("jquery");
 require("popper.js");
 require("bootstrap");
+require("datatables.net-bs4");
+require("datatables.net-responsive-bs4");
 require("toastr/toastr");
 
 const siQapp = function () {

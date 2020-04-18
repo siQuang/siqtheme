@@ -43,5 +43,9 @@
     "toastr": "^2.1.4",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.42.1"
+  },
+  "dependencies": {
+    "datatables.net-bs4": "^1.10.20",
+    "datatables.net-responsive-bs4": "^2.2.3"
   }
 }
