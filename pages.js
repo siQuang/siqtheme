@@ -40,6 +40,12 @@ module.exports = [
         topmenu: "ui",
         submenu: "uicolor"
     }, {
+        title: "siQtheme - Fontawesome",
+        template: "src/ui_fontawesome.ejs",
+        filename: "ui_fontawesome.html",
+        topmenu: "ui",
+        submenu: "uifa"
+    }, {
         title: "siQtheme - DataTables",
         template: "src/tb_datatables.ejs",
         filename: "tb_datatables.html",
