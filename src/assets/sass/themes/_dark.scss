@@ -223,44 +223,6 @@ body.theme-dark {
 	}
 
 	// ---------------------------------------------
-	// Datatables plugin
-	// ---------------------------------------------
-	.dataTables_wrapper {
-		input, select, textarea {
-			color: color-yiq($color-gray-800);
-			border-color: $color-black;
-			background-color: $color-gray-800;
-		}
-
-		.page-item {
-			.page-link {
-				color: color-yiq($color-gray-800);
-				background-color: $color-gray-800;
-				border-color: $color-black;
-			}
-
-			&.active {
-				.page-link {
-					color: color-yiq($color-gray-600);
-					background-color: $color-gray-600;
-					border-color: $color-black;
-				}
-			}
-		}
-	}
-
-	// ---------------------------------------------
-	// Bootstrap-select plugin
-	// ---------------------------------------------
-	.bootstrap-select {
-		button.dropdown-toggle {
-			color: color-yiq($color-gray-800);
-			border-color: $color-black;
-			background-color: $color-gray-800;
-		}
-	}
-
-	// ---------------------------------------------
 	// Cards
 	// ---------------------------------------------
 	.card {
@@ -379,6 +341,60 @@ body.theme-dark {
 	.border-bottom,
 	.border-left {
 		border-color: $color-gray-800 !important;
+	}
+
+	// ---------------------------------------------
+	// Datatables
+	// ---------------------------------------------
+	.dataTables_wrapper {
+		input, select, textarea {
+			color: color-yiq($color-gray-800);
+			border-color: $color-black;
+			background-color: $color-gray-800;
+		}
+
+		.table-bordered {
+			border-color: $color-gray-700;
+		}
+
+		.odd.selected,
+		.even.selected {
+			background-color: $color-black;
+		}
+
+		input,
+		select,
+		textarea {
+			border-color: $color-gray-900;
+			// padding: 4px;
+		}
+
+		.page-item {
+			.page-link {
+				color: color-yiq($color-gray-800);
+				background-color: $color-gray-800;
+				border-color: $color-black;
+			}
+
+			&.active {
+				.page-link {
+					color: color-yiq($color-gray-600);
+					background-color: $color-gray-600;
+					border-color: $color-black;
+				}
+			}
+		}
+	}
+
+	// ---------------------------------------------
+	// Bootstrap-select
+	// ---------------------------------------------
+	.bootstrap-select {
+		button.dropdown-toggle {
+			color: color-yiq($color-gray-800);
+			border-color: $color-black;
+			background-color: $color-gray-800;
+		}
 	}
 
 	// ---------------------------------------------

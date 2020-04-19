@@ -1,4 +1,14 @@
 body.theme-default {
 	color: $default-font-color;
 	background: $default-background-color;
+
+	// ---------------------------------------------
+	// Datatables
+	// ---------------------------------------------
+	.dataTables_wrapper {
+		.odd.selected,
+		.even.selected {
+			background-color: $color-gray-200;
+		}
+	}
 }
