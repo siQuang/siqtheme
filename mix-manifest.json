@@ -4,5 +4,7 @@
     "/assets/scripts/pages/ui_modal.js": "/assets/scripts/pages/ui_modal.js",
     "/assets/scripts/pages/ui_toastr.js": "/assets/scripts/pages/ui_toastr.js",
     "/assets/scripts/siqtheme.js": "/assets/scripts/siqtheme.js",
-    "/assets/css/siqtheme.css": "/assets/css/siqtheme.css"
+    "/assets/css/siqtheme.css": "/assets/css/siqtheme.css",
+    "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.css": "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.css",
+    "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.js": "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.js"
 }

@@ -1,0 +1,1 @@
+require('bootstrap4-toggle');

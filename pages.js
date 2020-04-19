@@ -16,6 +16,12 @@ module.exports = [
         topmenu: "db",
         submenu: "dashboard1"
     }, {
+        title: "siQtheme - Bootstrap Toggle",
+        template: "src/cp_bstoggle.ejs",
+        filename: "cp_bstoggle.html",
+        topmenu: "cp",
+        submenu: "cptoggle",
+    }, {
         title: "siQtheme - UI Buttons",
         template: "src/ui_buttons.ejs",
         filename: "ui_buttons.html",
