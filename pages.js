@@ -58,6 +58,12 @@ module.exports = [
         topmenu: "ui",
         submenu: "uimodal"
     }, {
+        title: "siQtheme - Toastr",
+        template: "src/ui_toastr.ejs",
+        filename: "ui_toastr.html",
+        topmenu: "ui",
+        submenu: "uitoastr"
+    }, {
         title: "siQtheme - DataTables",
         template: "src/tb_datatables.ejs",
         filename: "tb_datatables.html",
