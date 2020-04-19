@@ -70,6 +70,12 @@ module.exports = [
         topmenu: "ui",
         submenu: "uitoastr"
     }, {
+        title: "siQtheme - Basic Tables",
+        template: "src/tb_basic.ejs",
+        filename: "tb_basic.html",
+        topmenu: "tb",
+        submenu: "tbbasic"
+    }, {
         title: "siQtheme - DataTables",
         template: "src/tb_datatables.ejs",
         filename: "tb_datatables.html",
