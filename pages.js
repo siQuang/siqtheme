@@ -81,5 +81,11 @@ module.exports = [
         filename: "tb_datatables.html",
         topmenu: "tb",
         submenu: "tbdatatables"
+    }, {
+        title: "siQtheme - Form Control",
+        template: "src/fm_control.ejs",
+        filename: "fm_control.html",
+        topmenu: "fm",
+        submenu: "fmcontrol"
     }
 ];
