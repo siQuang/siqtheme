@@ -52,6 +52,12 @@ module.exports = [
         topmenu: "ui",
         submenu: "uithemify"
     }, {
+        title: "siQtheme - Bootstrap Modals",
+        template: "src/ui_modals.ejs",
+        filename: "ui_modals.html",
+        topmenu: "ui",
+        submenu: "uimodal"
+    }, {
         title: "siQtheme - DataTables",
         template: "src/tb_datatables.ejs",
         filename: "tb_datatables.html",

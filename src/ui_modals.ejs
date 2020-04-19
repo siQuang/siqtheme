@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% include src/partials/styles.ejs %>
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href=""><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="">UI Elements</a></li>
+                        <li class="breadcrumb-item active">Modals</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption uppercase">
+                                <i class="ti-briefcase"></i> Modals
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="row mb-4">
+                                    <div class="col-lg-6">
+                                        <h5>Basic Modal</h5>
+                                        <p>Toggle a working modal demo by clicking the button below. It will slide down and fade in from the
+                                            top of the page.</p>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Basic
+                                            Modal</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h5>Scrolling Long Content</h5>
+                                        <p>When modals become too long for the user’s viewport or device, they scroll independent of the
+                                            page itself. Try the demo below to see what we mean.</p>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModalLong">Scroll Content Modal</button>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-6">
+                                        <h5>Vertically Centered</h5>
+                                        <p>Add <code>.modal-dialog-centered</code> to <code>.modal-dialog</code> to vertically center the
+                                            modal.</p>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModalCenter">Vertically Centered Modal</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h5>Tooltips and Popovers</h5>
+                                        <p>Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips
+                                            and popovers within are also automatically dismissed.</p>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                            data-target="#exampleModalToolPop">Tooltips and Popovers</button>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-lg-6">
+                                        <h5>Colored Modals</h5>
+                                        <p>Add <code>.modal-*</code> to <code>.modal</code> for different background color.</p>
+                                        <button type="button" data-color="dark" class="btn btn-dark exampleColorModal">Dark</button>
+                                        <button type="button" data-color="carolina"
+                                            class="btn btn-primary exampleColorModal">Carolina</button>
+                                        <button type="button" data-color="success"
+                                            class="btn btn-success exampleColorModal">Success</button>
+                                        <button type="button" data-color="taffy" class="btn btn-taffy exampleColorModal">Taffy</button>
+                                        <button type="button" data-color="mustard"
+                                            class="btn btn-mustard exampleColorModal">Mustard</button>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h5>Modal Sizes</h5>
+                                        <p>Add <code>.modal-lg</code> or <code>modal-sm</code> to <code>.modal-dialog</code> for different
+                                            size. </p>
+                                        <button type="button" class="btn btn-primary exampleModalSize" data-size="lg">Large Modal</button>
+                                        <button type="button" class="btn btn-primary exampleModalSize" data-size="sm">Small Modal</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="row mb-4">
+                                    <div class="col-lg-5">
+                                        <div class="btn-group mb-3">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleVarying"
+                                                data-recipient="@Humbleman">Send Message</button>
+                                            <button type="button" class="btn btn-outline-success disabled">to siQuang Humbleman</button>
+                                        </div>
+                                        <div class="btn-group mb-3">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleVarying"
+                                                data-recipient="@Appleton">Send Message</button>
+                                            <button type="button" class="btn btn-outline-success disabled">to Pear Appleton</button>
+                                        </div>
+                                        <div class="btn-group mb-3">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleVarying"
+                                                data-recipient="@Tang">Send Message</button>
+                                            <button type="button" class="btn btn-outline-success disabled">to Lemony Tang</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <h5>Varying Modal Content</h5>
+                                        <p>Have a bunch of buttons that all trigger the same modal with slightly different contents? Use
+                                            <code>event.relatedTarget</code> and HTML <code>data-*</code> attributes to vary the contents of
+                                            the modal depending on which button was clicked.</p>
+                                        <pre class="text-carolina">
+                    $(<span class="text-danger">'#exampleModal'</span>).on(<span class="text-danger">'show.bs.modal'</span>, function (event) {
+                    var button = $(event.relatedTarget) <span class="text-secondary">// Button that triggered the modal</span>
+                    var recipient = button.data(<span class="text-danger">'whatever'</span>) <span class="text-secondary">// Extract info from data-* attributes
+                    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.</span>
+                    var modal = $(this)
+                    modal.find(<span class="text-danger">'.modal-title'</span>).text(<span class="text-danger">'New message to '</span> + recipient)
+                    modal.find(<span class="text-danger">'.modal-body input'</span>).val(recipient)
+                    })
+                                                </pre>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <h5>Options</h5>
+                            <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to
+                                <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Default</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-danger">backdrop</td>
+                                        <td>boolean or string</td>
+                                        <td>true</td>
+                                        <td>Includes a modal-backdrop element. Alternatively, specify static for a backdrop which doesn't
+                                            close the modal on click.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">keyboard</td>
+                                        <td>boolean</td>
+                                        <td>true</td>
+                                        <td>Closes the modal when escape key is pressed.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">focus</td>
+                                        <td>boolean</td>
+                                        <td>true</td>
+                                        <td>Puts the focus on the modal when initialized.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">show</td>
+                                        <td>boolean</td>
+                                        <td>true</td>
+                                        <td>Shows the modal when initialized.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    
+                            <h5 class="mt-5">Events</h5>
+                            <p>Bootstrap’s modal class exposes a few events for hooking into modal functionality. All modal events are fired
+                                at the modal itself (i.e. at the <code>&lt;div class="modal"&gt;</code>).</p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Event Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-danger">show.bs.modal</td>
+                                        <td>This event fires immediately when the show instance method is called. If caused by a click, the
+                                            clicked element is available as the relatedTarget property of the event.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">shown.bs.modal</td>
+                                        <td>This event is fired when the modal has been made visible to the user (will wait for CSS
+                                            transitions to complete). If caused by a click, the clicked element is available as the
+                                            relatedTarget property of the event.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">hide.bs.modal</td>
+                                        <td>This event is fired immediately when the hide instance method has been called.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-danger">hidden.bs.modal</td>
+                                        <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS
+                                            transitions to complete).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+            <!-- BOF MODALS -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Basic Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu euismod purus, vulputate tempus
+                                lacus. Aliquam erat volutpat. Aenean a egestas arcu. Maecenas ultricies varius cursus. Nam
+                                pellentesque ultrices ex, posuere sollicitudin sapien fermentum nec. Ut quis lacinia urna. Curabitur
+                                vestibulum velit id magna.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Scrolling Content</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu euismod purus, vulputate tempus
+                                lacus. Aliquam erat volutpat. Aenean a egestas arcu. Maecenas ultricies varius cursus. Nam
+                                pellentesque ultrices ex, posuere sollicitudin sapien fermentum nec. Ut quis lacinia urna. Curabitur
+                                vestibulum velit id magna facilisis porta. Donec non venenatis tellus. Fusce tempor convallis elit,
+                                non placerat quam tincidunt vel. Nam eleifend mi vel nibh euismod venenatis. Cras ac varius est.
+                                Fusce quis erat posuere ex egestas volutpat. Phasellus ornare, nulla et volutpat consectetur, odio
+                                purus faucibus ex, in faucibus nisi enim eu tortor. Nulla commodo, massa quis elementum
+                                pellentesque, mauris velit pharetra leo, vel cursus mi turpis et elit.</p>
+                            <p>Phasellus tristique mattis quam, vel malesuada nisl scelerisque vel. Donec sagittis odio vel est
+                                ullamcorper, eget aliquam tortor aliquam. Nunc tempor interdum erat. Suspendisse vehicula sagittis
+                                diam, sed sagittis dui luctus id. Pellentesque habitant morbi tristique senectus et netus et
+                                malesuada fames ac turpis egestas. Fusce ullamcorper suscipit ligula, dapibus rhoncus magna finibus
+                                eu. Donec vitae neque non quam viverra varius. Mauris nec ipsum facilisis, feugiat ipsum eget,
+                                molestie neque. Aliquam porta magna tellus, id auctor purus auctor et. Cras feugiat, ligula ac
+                                bibendum dictum, enim velit ornare enim, eu consequat velit mi dictum eros.</p>
+                            <p>Praesent egestas enim ac elit cursus placerat. Vestibulum ante ipsum primis in faucibus orci luctus
+                                et ultrices posuere cubilia Curae; Suspendisse volutpat turpis ut augue rutrum fringilla. Donec
+                                neque sem, maximus dictum neque in, mattis sollicitudin felis. Fusce mollis odio lectus, efficitur
+                                ultrices sem feugiat a. Vivamus pulvinar diam dolor, eu volutpat metus convallis nec. Praesent
+                                dictum sodales nunc ut semper. Donec iaculis nulla bibendum metus feugiat, non finibus risus cursus.
+                                Vestibulum tristique justo vitae felis egestas, ut lobortis lectus pulvinar. In imperdiet at ipsum
+                                et scelerisque. Phasellus in varius ex. Sed euismod accumsan auctor. Quisque sit amet tempor libero,
+                                eu viverra turpis.</p>
+                            <p>Etiam a tellus ipsum. Praesent quam tellus, malesuada quis quam id, posuere rhoncus mi. Integer sit
+                                amet justo massa. Praesent lacinia orci et justo venenatis cursus. Ut ut sagittis turpis,
+                                sollicitudin ultricies turpis. Sed lorem magna, luctus vel dui ac, efficitur efficitur magna.
+                                Pellentesque venenatis sapien nisl, id efficitur libero sagittis vel. Proin tincidunt, sapien nec
+                                viverra placerat, sem nulla ornare eros, vitae convallis tellus velit sed dolor. Suspendisse euismod
+                                massa quis mi molestie ultrices. Praesent tincidunt tellus ac tempor accumsan. Vestibulum convallis,
+                                lorem ac imperdiet hendrerit, nisl diam ultricies eros, at facilisis augue nisi laoreet sem. Ut
+                                hendrerit pellentesque neque. Quisque turpis metus, placerat a sodales a, tristique eget leo.</p>
+                            <p>Donec tincidunt vulputate tempus. Aenean sit amet mauris cursus, pharetra felis quis, euismod augue.
+                                Nunc elementum cursus vehicula. Nullam ligula turpis, semper id elementum sed, bibendum in est.
+                                Quisque orci diam, dignissim eget ornare vitae, vehicula nec mauris. Nunc vel ligula at magna
+                                accumsan malesuada. Sed ut gravida lacus. Etiam dui lectus, pretium a lobortis pretium, lobortis
+                                scelerisque lectus. Cras convallis ornare magna, ac accumsan urna tempor feugiat. Aenean interdum,
+                                tellus vel euismod placerat, mauris felis tempus erat, nec efficitur arcu odio aliquet turpis.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Vertically Centered Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Etiam a tellus ipsum. Praesent quam tellus, malesuada quis quam id, posuere rhoncus mi. Integer sit
+                                amet justo massa. Praesent lacinia orci et justo venenatis cursus. Ut ut sagittis turpis,
+                                sollicitudin ultricies turpis. Sed lorem magna, luctus vel dui ac, efficitur efficitur magna.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalToolPop" tabindex="-1" role="dialog" aria-labelledby="exampleModalToolPopTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalToolPopTitle">Tooltips and Popovers</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>Popover in a modal</h5>
+                            <p>This <a href="javascript:;" role="button" class="btn btn-sm btn-success popover-test"
+                                    data-toggle="popover" title="Popover title"
+                                    data-content="Popover body content is set in this attribute.">button</a> triggers a popover on
+                                click.</p>
+                            <hr>
+                            <h5>Tooltips in a modal</h5>
+                            <p><a href="#" class="tooltip-test" data-toggle="tooltip" title="Tooltip">This link</a> and <a href="#"
+                                    class="tooltip-test" data-toggle="tooltip" title="Tooltip">that link</a> have tooltips on hover.
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleVarying" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleColorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Colored Modal</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu euismod purus, vulputate tempus
+                                lacus. Aliquam erat volutpat. Aenean a egestas arcu. Maecenas ultricies varius cursus. Nam
+                                pellentesque ultrices ex, posuere sollicitudin sapien fermentum nec. Ut quis lacinia urna. Curabitur
+                                vestibulum velit id magna.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalSize" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal Sizes</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu euismod purus, vulputate tempus
+                                lacus. Aliquam erat volutpat. Aenean a egestas arcu. Maecenas ultricies varius cursus. Nam
+                                pellentesque ultrices ex, posuere sollicitudin sapien fermentum nec. Ut quis lacinia urna. Curabitur
+                                vestibulum velit id magna.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF MODALS -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <% include src/partials/scripts.ejs %>
+    <script src="assets/scripts/pages/ui_modal.js"></script>
+</body>
+
+</html>
