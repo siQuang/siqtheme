@@ -46,6 +46,12 @@ module.exports = [
         topmenu: "ui",
         submenu: "uifa"
     }, {
+        title: "siQtheme - Themify Icons",
+        template: "src/ui_themify.ejs",
+        filename: "ui_themify.html",
+        topmenu: "ui",
+        submenu: "uithemify"
+    }, {
         title: "siQtheme - DataTables",
         template: "src/tb_datatables.ejs",
         filename: "tb_datatables.html",
