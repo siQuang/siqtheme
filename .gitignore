@@ -3,6 +3,7 @@
 .DS_Store
 .idea/*
 sftp-config.json
+sftp.json
 *.code-workspace
 .vscode
 .vs
