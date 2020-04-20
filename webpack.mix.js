@@ -12,7 +12,6 @@ const pages = require('./pages');
  | file for your application, as well as bundling up your JS files.
  |
  */
-
 mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
     .js('src/assets/scripts/siqtheme.js', 'assets/scripts/')
     .browserSync({
@@ -72,7 +71,7 @@ mix.js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages/ui_card.js')
     .js('src/assets/scripts/pages/ui_modal.js', 'assets/scripts/pages/ui_modal.js')
     .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages/ui_toastr.js')
     .js('src/assets/scripts/pages/fm_control.js', 'assets/scripts/pages/fm_control.js');
-    
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

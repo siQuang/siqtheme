@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "siQuang (Simon Nguyen)",
   "license": "MIT",
+  "homepage": "https://siqtheme.3msquare.com",
   "description": "Responsive admin template with Webpack Mix and Bootstrap 4",
   "main": "src/scripts/siqtheme.js",
   "scripts": {
@@ -19,10 +20,19 @@
     "dashboard",
     "responsive",
     "bootstrap",
+    "webpack",
+    "laravel-mix",
     "sass",
     "theme",
     "jquery"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/siQuang/siqtheme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siQuang/siqtheme/issues"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
