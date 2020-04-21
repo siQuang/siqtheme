@@ -5,6 +5,8 @@
 
 siQtheme is a responsive admin template build with Webpack Mix (Laravel-Mix). Webpack is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included.
 
+Check out the demo at [https://siqtheme.3msquare.com](https://siqtheme.3msquare.com)
+
 ## Installation
 
 There are a few ways to install **siQtheme** depends on your project. You will need to have Node.js and NPM, click this link to [Downloading and installing Node.js and NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
