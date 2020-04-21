@@ -56,21 +56,24 @@ mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
  | Vendors Assets
  |--------------------------------------------------------------------------
  */
-mix.sass('src/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.scss', 'assets/vendors/bootstrap4-toggle/bootstrap4-toggle.css')
-    .js('src/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.js', 'assets/vendors/bootstrap4-toggle/bootstrap4-toggle.js')
-    .sass('src/assets/vendors/bootstrap-select/bootstrap-select.scss', 'assets/vendors/bootstrap-select/bootstrap-select.css')
-    .js('src/assets/vendors/bootstrap-select/bootstrap-select.js', 'assets/vendors/bootstrap-select/bootstrap-select.js');
+mix.styles('node_modules/bootstrap4-toggle/css/bootstrap4-toggle.min.css', 'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css')
+    .scripts('node_modules/bootstrap4-toggle/js/bootstrap4-toggle.min.js', 'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js')
+    .styles('node_modules/bootstrap-select/dist/css/bootstrap-select.min.css', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.css')
+    .scripts('node_modules/bootstrap-select/dist/js/bootstrap-select.min.js', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.js')
+    .styles('node_modules/apexcharts/dist/apexcharts.css', 'public/assets/vendors/apexcharts/apexcharts.css')
+    .scripts('node_modules/apexcharts/dist/apexcharts.js', 'public/assets/vendors/apexcharts/apexcharts.js');
 
 /*
  |--------------------------------------------------------------------------
- | Pages Scripts
+ | Pages Assets
  |--------------------------------------------------------------------------
  */
-mix.js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages/ui_card.js')
-    .js('src/assets/scripts/pages/tb_datatables.js', 'assets/scripts/pages/tb_datatables.js')
-    .js('src/assets/scripts/pages/ui_modal.js', 'assets/scripts/pages/ui_modal.js')
-    .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages/ui_toastr.js')
-    .js('src/assets/scripts/pages/fm_control.js', 'assets/scripts/pages/fm_control.js');
+mix.js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages')
+    .js('src/assets/scripts/pages/tb_datatables.js', 'assets/scripts/pages')
+    .js('src/assets/scripts/pages/ui_modal.js', 'assets/scripts/pages')
+    .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages')
+    .js('src/assets/scripts/pages/fm_control.js', 'assets/scripts/pages')
+    .js('src/assets/scripts/pages/dashboard1.js', 'assets/scripts/pages');
 
 // Full API
 // mix.js(src, output);

@@ -1,4 +1,5 @@
 {
+    "/assets/scripts/pages/dashboard1.js": "/assets/scripts/pages/dashboard1.js",
     "/assets/scripts/pages/fm_control.js": "/assets/scripts/pages/fm_control.js",
     "/assets/scripts/pages/tb_datatables.js": "/assets/scripts/pages/tb_datatables.js",
     "/assets/scripts/pages/ui_card.js": "/assets/scripts/pages/ui_card.js",
@@ -6,8 +7,10 @@
     "/assets/scripts/pages/ui_toastr.js": "/assets/scripts/pages/ui_toastr.js",
     "/assets/scripts/siqtheme.js": "/assets/scripts/siqtheme.js",
     "/assets/css/siqtheme.css": "/assets/css/siqtheme.css",
-    "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.css": "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.css",
-    "/assets/vendors/bootstrap-select/bootstrap-select.css": "/assets/vendors/bootstrap-select/bootstrap-select.css",
-    "/assets/vendors/bootstrap-select/bootstrap-select.js": "/assets/vendors/bootstrap-select/bootstrap-select.js",
-    "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.js": "/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.js"
+    "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css": "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css",
+    "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js": "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js",
+    "/public/assets/vendors/bootstrap-select/bootstrap-select.min.css": "/public/assets/vendors/bootstrap-select/bootstrap-select.min.css",
+    "/public/assets/vendors/bootstrap-select/bootstrap-select.min.js": "/public/assets/vendors/bootstrap-select/bootstrap-select.min.js",
+    "/public/assets/vendors/apexcharts/apexcharts.css": "/public/assets/vendors/apexcharts/apexcharts.css",
+    "/public/assets/vendors/apexcharts/apexcharts.js": "/public/assets/vendors/apexcharts/apexcharts.js"
 }

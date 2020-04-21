@@ -10,6 +10,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <% include src/partials/styles.ejs %>
+    <link rel="stylesheet" href="assets/vendors/apexcharts/apexcharts.css">
 </head>
 
 <body class="theme-dark">
@@ -42,27 +43,14 @@
                     <div class="card mb-3">
                         <div class="card-header">
                             <div class="caption uppercase">
-                                <i class="ti-briefcase"></i> Card Header
+                                <i class="ti-briefcase"></i> Mixed Chart
                             </div>
                             <div class="tools">
                                 <a href="#" class="btn btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
                                 <a href="#" class="btn btn-outline-secondary"><i class="ti-settings"></i></a>
                             </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">list-group list-group-flush</li>
-                            <li class="list-group-item">list-group list-group-flush</li>
-                        </ul>
-                        <div class="card-body">
-                            <p class="card-text">Below the music groans the speaking ancestor. The spigot kidnaps the
-                                utility postage on top of a south. A trilogy coasts across a floppy connector. The piano
-                                sacks the stable socket inside the handler. The spike multiplies beside the crazy
-                                scroll.</p>
-                        </div>
-                        <div class="card-footer text-right">
-                            <a href="#" class="btn btn-primary toastr-notify"><i class="ti-face-smile"></i> Submit</a>
-                            <a href="#" class="btn btn-secondary"><i class="ti-face-sad"></i> Cancel</a>
-                        </div>
+                        <div class="card-body" id="mixed-chart"></div>
                     </div>
                 </div>
             </div>
@@ -84,6 +72,8 @@
     </div> <!-- END WRAPPER -->
 
     <% include src/partials/scripts.ejs %>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/scripts/pages/dashboard1.js"></script>
 </body>
 
 </html>

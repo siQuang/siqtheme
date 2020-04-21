@@ -39,11 +39,18 @@ $ npm i siqtheme
 Just run the following cmd to generate a public directory with all the files.
 
 ``` bash
-# compile for development with hot reload at localhost:3000.
+# compile as development
 $ npm run dev
 
 # build production with minification
 $ npm run prod
+
+#---------------------------------------
+# To use hot reload, make sure to change
+# the proxy to your local environment
+# i.e. localhost/siqtheme
+#---------------------------------------
+$ npm run watch
 ```
 
 ## Structures
@@ -58,7 +65,6 @@ siqtheme/
 │   │   ├── img/
 │   │   ├── sass/
 │   │   ├── scripts/
-│   │   ├── vendors/
 │   ├── partials/
 │   ├── index.ejs
 │   └── ...

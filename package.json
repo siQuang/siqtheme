@@ -48,6 +48,7 @@
     "webpack": "^4.42.1"
   },
   "dependencies": {
+    "apexcharts": "^3.18.1",
     "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.14",
     "bootstrap4-toggle": "^3.6.1",
