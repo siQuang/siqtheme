@@ -1,12 +1,35 @@
-# siQtheme Admin Template with Webpack Mix and Bootstrap 4
+# siQtheme Reponsive Admin Template with jQuery and Bootstrap 4
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/siqtheme/latest.svg)](https://www.npmjs.com/package/siqtheme)
+
+siQtheme is a responsive admin template build with Webpack Mix (Laravel-Mix). Webpack is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included.
 
 ## Installation
+
+There are a few ways to install **siQtheme** depends on your project. You will need to have Node.js and NPM, click this link to [Downloading and installing Node.js and NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
+#### Download from Github
+
+- Download from [Github](https://github.com/siQuang/siqtheme).
+- Execute the following command from project directory.
 
 ``` bash
 # install app's dependencies
 $ npm install
+```
+
+#### GIT Clone
+
+``` bash
+git clone https://github.com/siQuang/siqtheme.git
+```
+
+#### NPM
+
+``` bash
+# install package
+$ npm i siqtheme
 ```
 
 ## Usage
@@ -14,7 +37,7 @@ $ npm install
 Just run the following cmd to generate a public directory with all the files.
 
 ``` bash
-# generate a development public directory with hot reload at localhost:3000.
+# compile for development with hot reload at localhost:3000.
 $ npm run dev
 
 # build production with minification
@@ -23,7 +46,7 @@ $ npm run prod
 
 ## Structures
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+The download contains the source files and will need to be compile for development or production.
 
 ```
 siqtheme/
@@ -41,27 +64,4 @@ siqtheme/
 ├── package.json
 ├── pages.js
 └── webpack.mix.js
-```
-
-## Install for Laravel
-
-### Install Package
-
-``` bash
-# install siqtheme package
-$ npm i siqtheme
-```
-
-### app.scss - add the following line
-
-``` bash
-# siQtheme SASS
-@import '~siqtheme/assets/sass/siqtheme';
-```
-
-### app.js - add the following line
-
-``` bash
-# siQtheme
-require('siqtheme');
 ```
