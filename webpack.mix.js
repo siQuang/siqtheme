@@ -53,18 +53,6 @@ mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
 
 /*
  |--------------------------------------------------------------------------
- | Vendors Assets
- |--------------------------------------------------------------------------
- */
-mix.styles('node_modules/bootstrap4-toggle/css/bootstrap4-toggle.min.css', 'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css')
-    .scripts('node_modules/bootstrap4-toggle/js/bootstrap4-toggle.min.js', 'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js')
-    .styles('node_modules/bootstrap-select/dist/css/bootstrap-select.min.css', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.css')
-    .scripts('node_modules/bootstrap-select/dist/js/bootstrap-select.min.js', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.js')
-    .styles('node_modules/apexcharts/dist/apexcharts.css', 'public/assets/vendors/apexcharts/apexcharts.css')
-    .scripts('node_modules/apexcharts/dist/apexcharts.js', 'public/assets/vendors/apexcharts/apexcharts.js');
-
-/*
- |--------------------------------------------------------------------------
  | Pages Assets
  |--------------------------------------------------------------------------
  */
@@ -74,6 +62,19 @@ mix.js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/fm_control.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/dashboard1.js', 'assets/scripts/pages');
+
+/*
+ |--------------------------------------------------------------------------
+ | Vendors Assets
+ |--------------------------------------------------------------------------
+ */
+mix.styles('node_modules/bootstrap4-toggle/css/bootstrap4-toggle.min.css', 'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css')
+    .scripts('node_modules/bootstrap4-toggle/js/bootstrap4-toggle.min.js', 'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js')
+    .styles('node_modules/bootstrap-select/dist/css/bootstrap-select.min.css', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.css')
+    .scripts('node_modules/bootstrap-select/dist/js/bootstrap-select.min.js', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.js')
+    .styles('node_modules/apexcharts/dist/apexcharts.css', 'public/assets/vendors/apexcharts/apexcharts.css')
+    .scripts('node_modules/apexcharts/dist/apexcharts.js', 'public/assets/vendors/apexcharts/apexcharts.js')
+    .scripts('node_modules/peity/jquery.peity.min.js', 'public/assets/vendors/peity/jquery.peity.min.js');
 
 // Full API
 // mix.js(src, output);

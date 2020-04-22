@@ -39,18 +39,362 @@
 
             <!-- BOF MAIN-BODY -->
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <div class="card mb-3">
-                        <div class="card-header">
-                            <div class="caption uppercase">
-                                <i class="ti-briefcase"></i> Mixed Chart
+                        <div class="card-body">
+                            <div class="icon-left text-secondary"><i class="ti-bar-chart"></i></div>
+                            <div class="number-right text-right">
+                                <h6 class="bold text-secondary">Monthly Goal</h6>
+                                <h3 class="card-title text-warning bold">$74,502</h3>
                             </div>
-                            <div class="tools">
-                                <a href="#" class="btn btn-outline-secondary"><i class="ti-pencil-alt"></i></a>
-                                <a href="#" class="btn btn-outline-secondary"><i class="ti-settings"></i></a>
+                            <div class="progress progress-bar-sm">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress-text text-secondary">
+                                <span class="float-left"><small>$0</small></span>
+                                <span class="float-right"><small>$100,000</small></span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="icon-left text-secondary"><i class="ti-receipt"></i></div>
+                            <div class="number-right text-right">
+                                <h6 class="bold text-secondary">Monthly Orders</h6>
+                                <h3 class="card-title text-primary bold">9,432</h3>
+                            </div>
+                            <div class="progress progress-bar-sm">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress-text text-secondary">
+                                <span class="float-left"><small>Total Monthly Orders</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="icon-left text-secondary"><i class="ti-wallet"></i></div>
+                            <div class="number-right text-right">
+                                <h6 class="bold text-secondary">Monthly Expenses</h6>
+                                <h3 class="card-title text-bubblegum bold">$2,942</h3>
+                            </div>
+                            <div class="progress progress-bar-sm">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-bubblegum" role="progressbar" style="width: 30%" aria-valuenow="30"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress-text text-secondary">
+                                <span class="float-left"><small>0%</small></span>
+                                <span class="float-right"><small>100%</small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-3">
                         <div class="card-body" id="mixed-chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Employees Sales -->
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-user"></i> Employees Sales
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="btn btn-round btn-sm btn-outline-secondary">Today</a>
+                                <a href="javascript:;" class="btn btn-round btn-sm btn-outline-secondary">Week</a>
+                                <a href="javascript:;" class="btn btn-round btn-sm btn-outline-secondary">Month</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6 text-right">
+                                                    <h6 class="bold text-secondary">Daily</h6>
+                                                    <h5 class="card-title text-tuscany bold">$7,524</h3>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div id="sparkline-chart1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6 text-right">
+                                                    <h6 class="bold text-secondary">Weekly</h6>
+                                                    <h5 class="card-title text-info bold">$18,852</h3>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div id="sparkline-chart2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 scrollbox-md">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Employee</th>
+                                                    <th class="text-right">Daily</th>
+                                                    <th class="text-right">Totals</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-07.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">siQuang Humbleman</a></td>
+                                                    <td class="text-right">$2,546</td>
+                                                    <td class="text-right">$14,587</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-02.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">Bob OfHope</a></td>
+                                                    <td class="text-right">$2,338</td>
+                                                    <td class="text-right">$8,321</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-03.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">Dana Squash</a></td>
+                                                    <td class="text-right">$1,478</td>
+                                                    <td class="text-right">$6,720</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-04.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">Pear Appleton</a></td>
+                                                    <td class="text-right">$2,338</td>
+                                                    <td class="text-right">$8,321</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-06.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">Lemony Tang</a></td>
+                                                    <td class="text-right">$1,478</td>
+                                                    <td class="text-right">$6,720</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-01.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">Duke Turnbull</a></td>
+                                                    <td class="text-right">$1,338</td>
+                                                    <td class="text-right">$4,321</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><img src="assets/img/profile/profile-05.jpg" class="rounded-circle mr-2" width="30" alt=""> <a href="javascript:;">Berry Cherry</a></td>
+                                                    <td class="text-right">$978</td>
+                                                    <td class="text-right">$3,720</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Low-stock Report -->
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-pencil-alt"></i> My Tasks
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Add New Task"><i class="ti-plus"></i></a>
+                                <a href="javascript:;" class="btn btn-sm btn-outline-secondary" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="ti-settings"></i> Settings <i class="ti-arrow-circle-down"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="javascript:;" class="dropdown-item">Action</a>
+                                    <a href="javascript:;" class="dropdown-item">Another Action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="javascript:;" class="dropdown-item">Some Setting</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row py-3">
+                                <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+                                    <h2 class="text-primary bold">10</h2>
+                                    Active
+                                </div>
+                                <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+                                    <h2 class="text-success bold">2</h2>
+                                    In-Progress
+                                </div>
+                                <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+                                    <h2 class="text-warning bold">3</h2>
+                                    On-Hold
+                                </div>
+                                <div class="col-md-3 col-6 d-flex flex-column align-items-center">
+                                    <h2 class="text-secondary bold">4</h2>
+                                    Completed
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 scrollbox-md">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-hand-open text-warning font-size-18 ml-3" data-toggle="tooltip" title="On-Hold"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Doctor Appointment</strong><br>Annual checkup with doctor
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-timer text-success font-size-18 ml-3" data-toggle="tooltip" title="In-Progress"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Write Unit Test</strong><br>Unit test for dashboard widgets
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-notepad text-primary font-size-18 ml-3" data-toggle="tooltip" title="Active"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Annual Report</strong><br>Design annual report cover
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-notepad text-primary font-size-18 ml-3" data-toggle="tooltip" title="Active"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Management Meeting</strong><br>Coming up meeting with staffs
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-timer text-success font-size-18 ml-3" data-toggle="tooltip" title="In-Progress"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Merge Development</strong><br>Merge development branch with master
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-hand-open text-warning font-size-18 ml-3" data-toggle="tooltip" title="On-Hold"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Build Report</strong><br>Build report graph for dashboard
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="d-flex align-items-baseline">
+                                                <div class="form-checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="checkbox1">
+                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
+                                                        <i class="ti-hand-open text-warning font-size-18 ml-3" data-toggle="tooltip" title="On-Hold"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="pl-4">
+                                                    <strong>Add New Vendor</strong><br>Add new third-party vendor
+                                                </div>
+                                                <div class="ml-auto">
+                                                    <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
+                                                    <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body" id="column-chart"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body" id="spline-chart"></div>
                     </div>
                 </div>
             </div>
