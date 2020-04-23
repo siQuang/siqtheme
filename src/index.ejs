@@ -10,7 +10,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 
     <% include src/partials/styles.ejs %>
-    <link rel="stylesheet" href="assets/vendors/apexcharts/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/pages/dashboard1.css">
 </head>
 
 <body class="theme-dark">
@@ -97,10 +97,11 @@
                 </div>
             </div>
 
+            <!-- Year Comparison Chart -->
             <div class="row">
                 <div class="col-md-12">
                     <div class="card mb-3">
-                        <div class="card-body" id="mixed-chart"></div>
+                        <div class="card-body" id="year-comparison-chart"></div>
                     </div>
                 </div>
             </div>
@@ -209,7 +210,7 @@
                     </div>
                 </div>
 
-                <!-- Low-stock Report -->
+                <!-- My Tasks -->
                 <div class="col-md-6">
                     <div class="card mb-3">
                         <div class="card-header">
@@ -254,17 +255,14 @@
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-hand-open text-warning font-size-18 ml-3" data-toggle="tooltip" title="On-Hold"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox1" name="checkbox1">
+                                                    <label class="custom-control-label" for="checkbox1">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Doctor Appointment</strong><br>Annual checkup with doctor
+                                                    <strong>Doctor Appointment <i class="ti-hand-open text-warning"></i></strong><br>Annual checkup with doctor
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -272,17 +270,14 @@
                                         </li>
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-timer text-success font-size-18 ml-3" data-toggle="tooltip" title="In-Progress"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox2" name="checkbox2">
+                                                    <label class="custom-control-label" for="checkbox2">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Write Unit Test</strong><br>Unit test for dashboard widgets
+                                                    <strong>Write Unit Test <i class="ti-timer text-success"></i></strong><br>Unit test for dashboard widgets
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -290,17 +285,14 @@
                                         </li>
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-notepad text-primary font-size-18 ml-3" data-toggle="tooltip" title="Active"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox3" name="checkbox3">
+                                                    <label class="custom-control-label" for="checkbox3">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Annual Report</strong><br>Design annual report cover
+                                                    <strong>Annual Report <i class="ti-notepad text-primary"></i></strong><br>Design annual report cover
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -308,17 +300,14 @@
                                         </li>
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-notepad text-primary font-size-18 ml-3" data-toggle="tooltip" title="Active"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox4" name="checkbox4">
+                                                    <label class="custom-control-label" for="checkbox4">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Management Meeting</strong><br>Coming up meeting with staffs
+                                                    <strong>Management Meeting <i class="ti-notepad text-primary"></i></strong><br>Coming up meeting with staffs
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -326,17 +315,14 @@
                                         </li>
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-timer text-success font-size-18 ml-3" data-toggle="tooltip" title="In-Progress"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox5" name="checkbox5">
+                                                    <label class="custom-control-label" for="checkbox5">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Merge Development</strong><br>Merge development branch with master
+                                                    <strong>Merge Development <i class="ti-timer text-success"></i></strong><br>Merge development branch with master
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -344,17 +330,14 @@
                                         </li>
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-hand-open text-warning font-size-18 ml-3" data-toggle="tooltip" title="On-Hold"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox6" name="checkbox6">
+                                                    <label class="custom-control-label" for="checkbox6">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Build Report</strong><br>Build report graph for dashboard
+                                                    <strong>Build Report <i class="ti-hand-open text-warning"></i></strong><br>Build report graph for dashboard
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -362,17 +345,14 @@
                                         </li>
                                         <li class="list-group-item">
                                             <div class="d-flex align-items-baseline">
-                                                <div class="form-checkbox">
-                                                    <label>
-                                                        <input type="checkbox" name="checkbox1">
-                                                        <span class="checkmark"><i class="fa fa-check"></i></span>
-                                                        <i class="ti-hand-open text-warning font-size-18 ml-3" data-toggle="tooltip" title="On-Hold"></i>
-                                                    </label>
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" class="custom-control-input" id="checkbox7" name="checkbox7">
+                                                    <label class="custom-control-label" for="checkbox7">&nbsp;</label>
                                                 </div>
                                                 <div class="pl-4">
-                                                    <strong>Add New Vendor</strong><br>Add new third-party vendor
+                                                    <strong>Add New Vendor <i class="ti-hand-open text-warning"></i></strong><br>Add new third-party vendor
                                                 </div>
-                                                <div class="ml-auto">
+                                                <div class="ml-auto text-right">
                                                     <a href="javascript:;" class="btn btn-sm btn-success"><i class="ti-check"></i></a>
                                                     <a href="javascript:;" class="btn btn-sm btn-danger"><i class="ti-trash"></i></a>
                                                 </div>
@@ -387,17 +367,98 @@
             </div>
 
             <div class="row">
+                <!-- Product Sales Chart -->
                 <div class="col-md-6">
                     <div class="card mb-3">
-                        <div class="card-body" id="column-chart"></div>
+                        <div class="card-body" id="product-sales-chart"></div>
                     </div>
                 </div>
+
+                <!-- Expenses Chart -->
                 <div class="col-md-6">
                     <div class="card mb-3">
-                        <div class="card-body" id="spline-chart"></div>
+                        <div class="card-body" id="expenses-chart"></div>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption text-primary">
+                                <i class="ti-panel"></i> Company Timeline
+                            </div>
+                        </div>
+                        <div class="card-body scrollbox-md">
+                            <div class="timeline-wrapper">
+                                <div class="timeline-item" data-date="04-22-2020">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates quam nisi distinctio dolorum est tempora.</p>
+                                    <a href="javascript:;" class="btn btn-sm btn-primary">More Info</a>
+                                </div>
+                                <div class="timeline-item" data-date="04-16-2020">
+                                    <p>Completed dashboard layout and add all required widgets.</p>
+                                </div>
+                                <div class="timeline-item" data-date="04-14-2020">
+                                    <p>Added new page to UI Element category. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit officiis ut natus et minima expedita.</p>
+                                    <a href="javascript:;" class="btn btn-sm btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption text-primary">
+                                <i class="ti-user"></i> Recent Members
+                            </div>
+                            <div class="tools">
+                                <a href="javascript:;" class="btn btn-sm btn-outline-primary"><i class="ti-import" data-toggle="tooltip" title="Download List"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="assets/img/profile/profile-01.jpg" alt="" class="card-img-top">
+                                        <div class="card-body p-2 text-center">
+                                            <h5 class="card-title">Jason Crispy</h5>
+                                            <p class="card-text font-size-12">Lorem Ipsum text placeholder.</p>
+                                            <a href="javascript:;" class="card-link"><i class="ti-twitter"></i> 3.5k</a>
+                                            <a href="javascript:;" class="card-link"><i class="ti-facebook"></i> 2.4k</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="assets/img/profile/profile-02.jpg" alt="" class="card-img-top">
+                                        <div class="card-body p-2 text-center">
+                                            <h5 class="card-title">Bob OfHope</h5>
+                                            <p class="card-text font-size-12">Lorem Ipsum text placeholder.</p>
+                                            <a href="javascript:;" class="card-link"><i class="ti-twitter"></i> 4.1k</a>
+                                            <a href="javascript:;" class="card-link"><i class="ti-facebook"></i> 7.2k</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img src="assets/img/profile/profile-03.jpg" alt="" class="card-img-top">
+                                        <div class="card-body p-2 text-center">
+                                            <h5 class="card-title">Dana Squash</h5>
+                                            <p class="card-text font-size-12">Lorem Ipsum text placeholder.</p>
+                                            <a href="javascript:;" class="card-link"><i class="ti-twitter"></i> 6.1k</a>
+                                            <a href="javascript:;" class="card-link"><i class="ti-facebook"></i> 5.5k</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- EOF MAIN-BODY -->
 
         </div>
@@ -416,7 +477,6 @@
     </div> <!-- END WRAPPER -->
 
     <% include src/partials/scripts.ejs %>
-    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/scripts/pages/dashboard1.js"></script>
 </body>
 

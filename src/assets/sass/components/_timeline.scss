@@ -1,0 +1,44 @@
+$border-color: rgba($color-gray-500, .3);
+
+.timeline-wrapper {
+	width: 90%;
+    margin: 0 auto;
+    
+    .timeline-item {
+        padding: 2.5em 1em 1em 2em;
+        position: relative;
+        border-left: 2px solid $border-color;
+        
+        &::before {
+            content: attr(data-date);
+            position: absolute;
+            display: block;
+            top: 1em;
+            left: 2.5em;
+            font-weight: bold;
+            font-weight: 700;
+            font-size: .75rem;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            top: 1em;
+            left: -8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 10px;
+            border: 2px solid $border-color;
+            content: '';
+            background: $cyan;
+        }
+
+        &:last-child {
+            border-image: linear-gradient(
+                to bottom,
+                $border-color 60%,
+                rgba($border-color, 0)) 1 100%
+            ;
+        }
+    }
+}

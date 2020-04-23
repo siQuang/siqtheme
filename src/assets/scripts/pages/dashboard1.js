@@ -86,43 +86,28 @@ var Dashboard1 = function() {
             }
         };
 
-        var chart = new ApexCharts(document.querySelector("#mixed-chart"), options);
+        var chart = new ApexCharts(document.querySelector("#year-comparison-chart"), options);
         chart.render();
     }
 
-    var columnChart = function() {
+    var productSalesChart = function() {
         var options = {
             title: {
-                text: 'Column Chart',
+                text: 'Product Sales',
                 align: 'left'
             },
             series: [{
-                name: 'Servings',
-                data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
+                name: 'Units',
+                data: [44, 55, 41, 67, 22, 43, 21]
             }],
-            annotations: {
-                points: [{
-                    x: 'Bananas',
-                    seriesIndex: 0,
-                    label: {
-                        borderColor: '#775DD0',
-                        offsetY: 0,
-                        style: {
-                            color: '#fff',
-                            background: '#775DD0',
-                        },
-                        text: 'Bananas are good',
-                    }
-                }]
-            },
             chart: {
-                height: 350,
+                height: 310,
                 type: 'bar',
                 foreColor: '#999999'
             },
             plotOptions: {
                 bar: {
-                    columnWidth: '50%',
+                    columnWidth: '70%',
                     endingShape: 'rounded'
                 }
             },
@@ -137,14 +122,20 @@ var Dashboard1 = function() {
                     rotate: -45,
                     color: '#fff'
                 },
-                categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
-                    'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
+                categories: [
+                    'Coffee Grinder', 
+                    '4PC Cup Set', 
+                    'Salad Spinner', 
+                    'Mandoline', 
+                    'Utensil Set', 
+                    'Food Slicer', 
+                    'Veggie Chopper'
                 ],
                 tickPlacement: 'on'
             },
             yaxis: {
                 title: {
-                    text: 'Servings',
+                    text: 'Units',
                 },
             },
             fill: {
@@ -162,46 +153,48 @@ var Dashboard1 = function() {
             }
         };
 
-        var chart = new ApexCharts(document.querySelector("#column-chart"), options);
+        var chart = new ApexCharts(document.querySelector("#product-sales-chart"), options);
         chart.render();
     }
 
-    var splineChart = function() {
+    var expensesChart = function() {
         var options = {
             title: {
-                text: 'Spline Chart',
+                text: 'Monthly Expenses',
                 align: 'left'
             },
-            series: [{
-                name: 'series1',
-                data: [31, 40, 28, 51, 42, 109, 100]
-            }, {
-                name: 'series2',
-                data: [11, 32, 45, 32, 34, 52, 41]
-            }],
+            series: [2897, 1570, 560, 4678, 3500],
             chart: {
-                height: 350,
-                type: 'area',
+                width: 480,
+                type: 'donut',
                 foreColor: '#999999'
             },
             dataLabels: {
                 enabled: false
             },
-            stroke: {
-                curve: 'smooth'
+            fill: {
+                type: 'gradient',
             },
-            xaxis: {
-                type: 'datetime',
-                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            labels: ['Office', 'Travel', 'Entertainment', 'Advertising', 'Mortgage'],
+            legend: {
+                formatter: function (val, opts) {
+                    return val + " - " + opts.w.globals.series[opts.seriesIndex]
+                }
             },
-            tooltip: {
-                x: {
-                    format: 'dd/MM/yy HH:mm'
-                },
-            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 300
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
         };
 
-        var chart = new ApexCharts(document.querySelector("#spline-chart"), options);
+        var chart = new ApexCharts(document.querySelector("#expenses-chart"), options);
         chart.render();
     }
 
@@ -310,8 +303,8 @@ var Dashboard1 = function() {
     return {
         init: function() {
             yearCompareChart();
-            columnChart();
-            splineChart();
+            productSalesChart();
+            expensesChart();
             sparklineChart1();
             sparklineChart2();
         }

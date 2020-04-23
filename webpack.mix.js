@@ -61,7 +61,13 @@ mix.js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/ui_modal.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/fm_control.js', 'assets/scripts/pages')
-    .js('src/assets/scripts/pages/dashboard1.js', 'assets/scripts/pages');
+    .styles([
+        'node_modules/apexcharts/dist/apexcharts.css',
+    ], 'public/assets/css/pages/dashboard1.css')
+    .scripts([
+        'node_modules/apexcharts/dist/apexcharts.js',
+        'src/assets/scripts/pages/dashboard1.js'
+    ], 'public/assets/scripts/pages/dashboard1.js');
 
 /*
  |--------------------------------------------------------------------------
