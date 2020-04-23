@@ -1,91 +1,106 @@
+let themeName       = "siQtheme",
+    sourcePath      = "src/",
+    dashboardMenu   = "db",
+    componentsMenu  = "cp",
+    uiElementsMenu  = "ui",
+    tablesMenu      = "tb",
+    formsMenu       = "fm",
+    chartsMenu      = "ch";
+
 /*
  |--------------------------------------------------------------------------
  | HTML Pages
  |--------------------------------------------------------------------------
  | title:       The page title
- | template:    Source to ejs file
- | filename:    Filename in public
+ | template:    Source filename (ejs file)
+ | filename:    HTML filename with extension [.html]
  | topmenu:     Top menu category
- | submenu:     Sub-menu category
+ | submenu:     Submenu name (unique)
  */
 module.exports = [
     {
-        title: "siQtheme by 3M Square",
-        template: "src/index.ejs",
+        title: themeName + " by 3M Square",
+        template: sourcePath + "index.ejs",
         filename: "index.html",
-        topmenu: "db",
+        topmenu: dashboardMenu,
         submenu: "dashboard1"
     }, {
-        title: "siQtheme - Bootstrap Toggle",
-        template: "src/cp_bstoggle.ejs",
+        title: themeName + " - Bootstrap Toggle",
+        template: sourcePath + "cp_bstoggle.ejs",
         filename: "cp_bstoggle.html",
-        topmenu: "cp",
+        topmenu: componentsMenu,
         submenu: "cptoggle",
     }, {
-        title: "siQtheme - UI Buttons",
-        template: "src/ui_buttons.ejs",
+        title: themeName + " - UI Buttons",
+        template: sourcePath + "ui_buttons.ejs",
         filename: "ui_buttons.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uibutton",
     }, {
-        title: "siQtheme - UI Typography",
-        template: "src/ui_typography.ejs",
+        title: themeName + " - UI Typography",
+        template: sourcePath + "ui_typography.ejs",
         filename: "ui_typography.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uitypo"
     }, {
-        title: "siQtheme - UI Cards",
-        template: "src/ui_cards.ejs",
+        title: themeName + " - UI Cards",
+        template: sourcePath + "ui_cards.ejs",
         filename: "ui_cards.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uicard",
     }, {
-        title: "siQtheme - UI Colors",
-        template: "src/ui_colors.ejs",
+        title: themeName + " - UI Colors",
+        template: sourcePath + "ui_colors.ejs",
         filename: "ui_colors.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uicolor"
     }, {
-        title: "siQtheme - Fontawesome",
-        template: "src/ui_fontawesome.ejs",
+        title: themeName + " - Fontawesome",
+        template: sourcePath + "ui_fontawesome.ejs",
         filename: "ui_fontawesome.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uifa"
     }, {
-        title: "siQtheme - Themify Icons",
-        template: "src/ui_themify.ejs",
+        title: themeName + " - Themify Icons",
+        template: sourcePath + "ui_themify.ejs",
         filename: "ui_themify.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uithemify"
     }, {
-        title: "siQtheme - Bootstrap Modals",
-        template: "src/ui_modals.ejs",
+        title: themeName + " - Bootstrap Modals",
+        template: sourcePath + "ui_modals.ejs",
         filename: "ui_modals.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uimodal"
     }, {
-        title: "siQtheme - Toastr",
-        template: "src/ui_toastr.ejs",
+        title: themeName + " - Toastr",
+        template: sourcePath + "ui_toastr.ejs",
         filename: "ui_toastr.html",
-        topmenu: "ui",
+        topmenu: uiElementsMenu,
         submenu: "uitoastr"
     }, {
-        title: "siQtheme - Basic Tables",
-        template: "src/tb_basic.ejs",
+        title: themeName + " - Basic Tables",
+        template: sourcePath + "tb_basic.ejs",
         filename: "tb_basic.html",
-        topmenu: "tb",
+        topmenu: tablesMenu,
         submenu: "tbbasic"
     }, {
-        title: "siQtheme - DataTables",
-        template: "src/tb_datatables.ejs",
+        title: themeName + " - DataTables",
+        template: sourcePath + "tb_datatables.ejs",
         filename: "tb_datatables.html",
-        topmenu: "tb",
+        topmenu: tablesMenu,
         submenu: "tbdatatables"
     }, {
-        title: "siQtheme - Form Control",
-        template: "src/fm_control.ejs",
+        title: themeName + " - Form Control",
+        template: sourcePath + "fm_control.ejs",
         filename: "fm_control.html",
-        topmenu: "fm",
+        topmenu: formsMenu,
         submenu: "fmcontrol"
+    }, {
+        title: themeName + " - Apex Charts",
+        template: sourcePath + "ch_apexcharts.ejs",
+        filename: "ch_apexcharts.html",
+        topmenu: chartsMenu,
+        submenu: "chapex"
     }
 ];

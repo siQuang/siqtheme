@@ -3,12 +3,13 @@ require("popper.js");
 require("bootstrap");
 require("datatables.net-bs4");
 require("datatables.net-responsive-bs4");
+window.moment = require("moment");
 window.toastr = require("toastr/toastr");
 
-const siQapp = function () {
+const siQapp = function() {
 
     // handle theme switch
-    var handleThemeColor = function () {
+    var handleThemeColor = function() {
 		/**
 		 * get theme from localstorage
 		 * 
@@ -24,7 +25,7 @@ const siQapp = function () {
         // 	}
         // }
 
-        $('body').on('click', '.switch-theme', function () {
+        $('body').on('click', '.switch-theme', function() {
             var theme = $(this).attr('id');
 
             $('body').removeClass().addClass(theme);
@@ -37,7 +38,7 @@ const siQapp = function () {
     }
 
     // handle sidebar-dropdown
-    var handleDropdownMenu = function () {
+    var handleDropdownMenu = function() {
         $('.sidebar-dropdown > a').click(function () {
             if ($(this).parent().hasClass('active')) {
                 $('.sidebar-dropdown').removeClass('active');
@@ -50,7 +51,7 @@ const siQapp = function () {
     }
 
     // handle collapsed sidebar
-    var handleCollapsedSidebar = function () {
+    var handleCollapsedSidebar = function() {
         $('.toggle-sidebar-btn').click(function () {
             if ($('.grid-wrapper').hasClass('collapsed')) {
                 // unpin sidebar when hovered
@@ -73,23 +74,23 @@ const siQapp = function () {
     }
 
     // handle slidout sidebar for small screen size
-    var handleSlideSidebar = function () {
-        $('.slide-sidebar-btn').click(function (e) {
+    var handleSlideSidebar = function() {
+        $('.slide-sidebar-btn').click(function(e) {
             e.preventDefault();
 
             $('.slide-sidebar-btn, .sidebar').toggleClass('open');
         });
 
         // close sidebar
-        $('.slide-sidebar-btn.open').click(function (e) {
+        $('.slide-sidebar-btn.open').click(function(e) {
             e.preventDefault();
             $('.sidebar').width(0);
         });
     }
 
     // toggle right sidebar
-    var handleRightSidebar = function () {
-        $('.right-sidebar-toggle').on('click', function (e) {
+    var handleRightSidebar = function() {
+        $('.right-sidebar-toggle').on('click', function(e) {
             e.preventDefault();
 
             $('#sidebar-right').toggleClass('sidebar-open');
@@ -99,29 +100,29 @@ const siQapp = function () {
     }
 
     // handle header search animation
-    var handleTopSearch = function () {
-        $('#top-search').focus(function () {
+    var handleTopSearch = function() {
+        $('#top-search').focus(function() {
             $(this).addClass('wider');
         });
 
-        $('#top-search').blur(function () {
+        $('#top-search').blur(function() {
             $(this).removeClass('wider');
         });
     }
 
     // handle top-nav dropdown transition
-    var handleTopBarTransition = function () {
-        $('.menu-item').on('show.bs.dropdown', function () {
+    var handleTopBarTransition = function() {
+        $('.menu-item').on('show.bs.dropdown', function() {
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown("fast");
         });
 
-        $('.menu-item').on('hide.bs.dropdown', function () {
+        $('.menu-item').on('hide.bs.dropdown', function() {
             $(this).find('.dropdown-menu').first().stop(true, true).slideUp("fast");
         });
     }
 
     return {
-        init: function () {
+        init: function() {
 
             handleThemeColor();
             handleDropdownMenu();
@@ -144,6 +145,6 @@ const siQapp = function () {
 
 }();
 
-$(function () {
+$(function() {
     siQapp.init();
 });
