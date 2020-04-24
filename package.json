@@ -50,7 +50,9 @@
   "dependencies": {
     "apexcharts": "^3.18.1",
     "bootstrap": "^4.4.1",
+    "bootstrap-datepicker": "^1.9.0",
     "bootstrap-select": "^1.13.14",
+    "bootstrap-timepicker": "^0.5.2",
     "bootstrap4-toggle": "^3.6.1",
     "datatables.net-bs4": "^1.10.20",
     "datatables.net-responsive-bs4": "^2.2.3",

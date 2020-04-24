@@ -25,6 +25,12 @@ module.exports = [
         topmenu: dashboardMenu,
         submenu: "dashboard1"
     }, {
+        title: themeName + " - Date Time Picker",
+        template: sourcePath + "cp_datetime.ejs",
+        filename: "cp_datetime.html",
+        topmenu: componentsMenu,
+        submenu: "cpdatetime",
+    }, {
         title: themeName + " - Bootstrap Toggle",
         template: sourcePath + "cp_bstoggle.ejs",
         filename: "cp_bstoggle.html",

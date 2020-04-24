@@ -9,11 +9,15 @@
     "/assets/css/siqtheme.css": "/assets/css/siqtheme.css",
     "/public/assets/css/pages/dashboard1.css": "/public/assets/css/pages/dashboard1.css",
     "/public/assets/scripts/pages/dashboard1.js": "/public/assets/scripts/pages/dashboard1.js",
+    "/public/assets/css/pages/cp_datetime.css": "/public/assets/css/pages/cp_datetime.css",
+    "/public/assets/scripts/pages/cp_datetime.js": "/public/assets/scripts/pages/cp_datetime.js",
     "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css": "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css",
     "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js": "/public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js",
     "/public/assets/vendors/bootstrap-select/bootstrap-select.min.css": "/public/assets/vendors/bootstrap-select/bootstrap-select.min.css",
     "/public/assets/vendors/bootstrap-select/bootstrap-select.min.js": "/public/assets/vendors/bootstrap-select/bootstrap-select.min.js",
     "/public/assets/vendors/apexcharts/apexcharts.css": "/public/assets/vendors/apexcharts/apexcharts.css",
     "/public/assets/vendors/apexcharts/apexcharts.js": "/public/assets/vendors/apexcharts/apexcharts.js",
+    "/public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.css": "/public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.css",
+    "/public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.js": "/public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.js",
     "/public/assets/vendors/peity/jquery.peity.min.js": "/public/assets/vendors/peity/jquery.peity.min.js"
 }

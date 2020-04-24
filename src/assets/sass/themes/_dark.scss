@@ -344,6 +344,88 @@ body.theme-dark {
 	}
 
 	// ---------------------------------------------
+	// Dropdown Menu
+	// ---------------------------------------------
+	.dropdown-menu {
+		background-color: $color-gray-700;
+		color: $color-gray-200;
+
+		.dropdown-item {
+			color: $color-gray-200;
+
+			&:hover {
+				background-color: $color-gray-600;
+			}
+		}
+
+		.dropdown-divider {
+			border-top: 1px solid $color-gray-600;
+		}
+	}
+
+	// ---------------------------------------------
+	// Bootstrap Datepicker
+	// ---------------------------------------------
+	.datepicker {
+		&.datepicker-dropdown {
+			&:before {
+				border-bottom: 7px solid transparent;
+			}
+			&:after {
+				border-bottom: 6px solid $color-gray-700;
+			}
+
+			&.datepicker-orient-top {
+				&:before {
+					border-top: 7px solid transparent;
+					border-bottom: 0;
+				}
+				&:after {
+					border-top: 6px solid $color-gray-700;
+					border-bottom: 0;
+				}
+			}
+		}
+
+		table tr td,
+		table tr th {
+			&:hover {
+				background-color: $color-gray-800;
+			}
+		}
+	}
+
+	// ---------------------------------------------
+	// Bootstrap Timepicker
+	// ---------------------------------------------
+	.bootstrap-timepicker-widget {
+		&.dropdown-menu:after {
+			border-bottom: 6px solid $color-gray-700;
+		}
+
+		&.timepicker-orient-bottom:before {
+			border-top: 7px solid $color-gray-700;
+		}
+
+		&.timepicker-orient-bottom:after {
+			border-top: 6px solid transparent;
+		}
+
+		table td a {
+			color: $color-gray-200;
+			border: none;
+
+			> span {
+				color: $color-gray-200;
+			}
+
+			&:hover {
+				background-color: $color-gray-800;
+			}
+		}
+	}
+
+	// ---------------------------------------------
 	// Datatables
 	// ---------------------------------------------
 	.dataTables_wrapper {

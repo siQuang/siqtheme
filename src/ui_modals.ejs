@@ -105,6 +105,23 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="row mb-4">
+                                    <div class="col-lg-7">
+                                        <h5>Varying Modal Content</h5>
+                                        <p>Have a bunch of buttons that all trigger the same modal with slightly different contents? Use
+                                            <code>event.relatedTarget</code> and HTML <code>data-*</code> attributes to vary the contents of
+                                            the modal depending on which button was clicked.</p>
+<pre class="text-carolina">
+$(<span class="text-danger">'#exampleModal'</span>).on(<span class="text-danger">'show.bs.modal'</span>, function (event) {
+var button = $(event.relatedTarget) <span class="text-secondary">// Button that triggered the modal</span>
+var recipient = button.data(<span class="text-danger">'whatever'</span>) <span class="text-secondary">// Extract info from data-* attributes
+// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.</span>
+var modal = $(this)
+modal.find(<span class="text-danger">'.modal-title'</span>).text(<span class="text-danger">'New message to '</span> + recipient)
+modal.find(<span class="text-danger">'.modal-body input'</span>).val(recipient)
+})
+</pre>
+                                    </div>
                                     <div class="col-lg-5">
                                         <div class="btn-group mb-3">
                                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleVarying"
@@ -122,23 +139,6 @@
                                             <button type="button" class="btn btn-outline-success disabled">to Lemony Tang</button>
                                         </div>
                                     </div>
-                                    <div class="col-lg-7">
-                                        <h5>Varying Modal Content</h5>
-                                        <p>Have a bunch of buttons that all trigger the same modal with slightly different contents? Use
-                                            <code>event.relatedTarget</code> and HTML <code>data-*</code> attributes to vary the contents of
-                                            the modal depending on which button was clicked.</p>
-                                        <pre class="text-carolina">
-                    $(<span class="text-danger">'#exampleModal'</span>).on(<span class="text-danger">'show.bs.modal'</span>, function (event) {
-                    var button = $(event.relatedTarget) <span class="text-secondary">// Button that triggered the modal</span>
-                    var recipient = button.data(<span class="text-danger">'whatever'</span>) <span class="text-secondary">// Extract info from data-* attributes
-                    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-                    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.</span>
-                    var modal = $(this)
-                    modal.find(<span class="text-danger">'.modal-title'</span>).text(<span class="text-danger">'New message to '</span> + recipient)
-                    modal.find(<span class="text-danger">'.modal-body input'</span>).val(recipient)
-                    })
-                                                </pre>
-                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -146,77 +146,81 @@
                             <h5>Options</h5>
                             <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to
                                 <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Type</th>
-                                        <th>Default</th>
-                                        <th>Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-danger">backdrop</td>
-                                        <td>boolean or string</td>
-                                        <td>true</td>
-                                        <td>Includes a modal-backdrop element. Alternatively, specify static for a backdrop which doesn't
-                                            close the modal on click.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-danger">keyboard</td>
-                                        <td>boolean</td>
-                                        <td>true</td>
-                                        <td>Closes the modal when escape key is pressed.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-danger">focus</td>
-                                        <td>boolean</td>
-                                        <td>true</td>
-                                        <td>Puts the focus on the modal when initialized.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-danger">show</td>
-                                        <td>boolean</td>
-                                        <td>true</td>
-                                        <td>Shows the modal when initialized.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Default</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-danger">backdrop</td>
+                                            <td>boolean or string</td>
+                                            <td>true</td>
+                                            <td>Includes a modal-backdrop element. Alternatively, specify static for a backdrop which doesn't
+                                                close the modal on click.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">keyboard</td>
+                                            <td>boolean</td>
+                                            <td>true</td>
+                                            <td>Closes the modal when escape key is pressed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">focus</td>
+                                            <td>boolean</td>
+                                            <td>true</td>
+                                            <td>Puts the focus on the modal when initialized.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">show</td>
+                                            <td>boolean</td>
+                                            <td>true</td>
+                                            <td>Shows the modal when initialized.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                     
                             <h5 class="mt-5">Events</h5>
                             <p>Bootstrap’s modal class exposes a few events for hooking into modal functionality. All modal events are fired
                                 at the modal itself (i.e. at the <code>&lt;div class="modal"&gt;</code>).</p>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>Event Type</th>
-                                        <th>Description</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-danger">show.bs.modal</td>
-                                        <td>This event fires immediately when the show instance method is called. If caused by a click, the
-                                            clicked element is available as the relatedTarget property of the event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-danger">shown.bs.modal</td>
-                                        <td>This event is fired when the modal has been made visible to the user (will wait for CSS
-                                            transitions to complete). If caused by a click, the clicked element is available as the
-                                            relatedTarget property of the event.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-danger">hide.bs.modal</td>
-                                        <td>This event is fired immediately when the hide instance method has been called.</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-danger">hidden.bs.modal</td>
-                                        <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS
-                                            transitions to complete).</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Event Type</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-danger">show.bs.modal</td>
+                                            <td>This event fires immediately when the show instance method is called. If caused by a click, the
+                                                clicked element is available as the relatedTarget property of the event.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">shown.bs.modal</td>
+                                            <td>This event is fired when the modal has been made visible to the user (will wait for CSS
+                                                transitions to complete). If caused by a click, the clicked element is available as the
+                                                relatedTarget property of the event.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">hide.bs.modal</td>
+                                            <td>This event is fired immediately when the hide instance method has been called.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">hidden.bs.modal</td>
+                                            <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS
+                                                transitions to complete).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

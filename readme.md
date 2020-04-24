@@ -46,9 +46,9 @@ $ npm run dev
 $ npm run prod
 
 #---------------------------------------
-# To use hot reload, make sure to change
+# To use browser sync, make sure to change
 # the proxy to your local environment
-# i.e. localhost/siqtheme
+# i.e. localhost
 #---------------------------------------
 $ npm run watch
 ```

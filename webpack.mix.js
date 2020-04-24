@@ -63,6 +63,15 @@ mix.styles([
         'node_modules/apexcharts/dist/apexcharts.js',
         'src/assets/scripts/pages/dashboard1.js'
     ], 'public/assets/scripts/pages/dashboard1.js')
+    .styles([
+        'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css',
+        'node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css'
+    ], 'public/assets/css/pages/cp_datetime.css')
+    .scripts([
+        'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
+        'node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js',
+        'src/assets/scripts/pages/cp_datetime.js'
+    ], 'public/assets/scripts/pages/cp_datetime.js')
     .js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/ui_modal.js', 'assets/scripts/pages')
     .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages')
@@ -81,6 +90,8 @@ mix.styles('node_modules/bootstrap4-toggle/css/bootstrap4-toggle.min.css', 'publ
     .scripts('node_modules/bootstrap-select/dist/js/bootstrap-select.min.js', 'public/assets/vendors/bootstrap-select/bootstrap-select.min.js')
     .styles('node_modules/apexcharts/dist/apexcharts.css', 'public/assets/vendors/apexcharts/apexcharts.css')
     .scripts('node_modules/apexcharts/dist/apexcharts.js', 'public/assets/vendors/apexcharts/apexcharts.js')
+    .styles('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css', 'public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.css')
+    .scripts('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.js')
     .scripts('node_modules/peity/jquery.peity.min.js', 'public/assets/vendors/peity/jquery.peity.min.js');
 
 // Full API
