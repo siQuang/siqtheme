@@ -37,26 +37,20 @@ const siQapp = function() {
         });
     }
 
-    // handle maincat active state
+    // handle menu active state
     var handleActiveMenu = function() {
-        $('.maincat > a').click(function () {
-            if ($(this).parent().hasClass('active')) {
-                $('.maincat').removeClass('active');
-                $(this).parent().removeClass('active');
-            } else {
-                $('.maincat').removeClass('active');
-                $(this).parent().addClass('active');
-            }
-        });
-
-        $('.tier1 > a').click(function () {
-            if ($(this).parent().hasClass('active')) {
-                $('.tier1').removeClass('active');
-                $(this).parent().removeClass('active');
-            } else {
-                $('.tier1').removeClass('active');
-                $(this).parent().addClass('active');
-            }
+        var elems = ['.maincat', '.tier1'];
+        
+        $.each(elems, function(index, value) {
+            $(value + '>a').click(function () {
+                if ($(this).parent().hasClass('active')) {
+                    $(value).removeClass('active');
+                    $(this).parent().removeClass('active');
+                } else {
+                    $(value).removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+            });
         });
     }
 
