@@ -12,13 +12,13 @@
                                 <span class="menu-text">Dashboard</span>
                             </a>
                         </li>
-                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'cp') { %>active<% } %>">
+                        <li class="maincat <% if (htmlWebpackPlugin.options.topmenu == 'cp') { %>active<% } %>">
                             <a href="#">
                                 <i class="ti-plug"></i>
                                 <span class="menu-text">Components</span>
                                 <span class="badge badge-pill badge-danger">3</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li <% if (htmlWebpackPlugin.options.submenu == 'cpdatetime') { %>class="active" <% } %>>
                                         <a href="cp_datetime.html">Date & Time</a>
@@ -29,12 +29,12 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'ui') { %>active<% } %>">
+                        <li class="maincat <% if (htmlWebpackPlugin.options.topmenu == 'ui') { %>active<% } %>">
                             <a href="#">
                                 <i class="ti-palette"></i>
                                 <span class="menu-text">UI Elements</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li <% if (htmlWebpackPlugin.options.submenu == 'uitypo') { %>class="active"<% } %>>
                                         <a href="ui_typography.html">Typography</a>
@@ -63,12 +63,12 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'tb') { %>active<% } %>">
+                        <li class="maincat <% if (htmlWebpackPlugin.options.topmenu == 'tb') { %>active<% } %>">
                             <a href="#">
                                 <i class="ti-layout-grid2"></i>
                                 <span class="menu-text">Tables</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li <% if (htmlWebpackPlugin.options.submenu == 'tbbasic') { %>class="active" <% } %>>
                                         <a href="tb_basic.html">Basic Tables</a>
@@ -79,31 +79,41 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'fm') { %>active<% } %>">
+                        <li class="maincat <% if (htmlWebpackPlugin.options.topmenu == 'fm') { %>active<% } %>">
                             <a href="#">
                                 <i class="ti-write"></i>
                                 <span class="menu-text">Forms</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li <% if (htmlWebpackPlugin.options.submenu == 'fmcontrol') { %>class="active" <% } %>>
                                         <a href="fm_control.html">Form Control</a>
                                     </li>
-                                    <li <% if (htmlWebpackPlugin.options.submenu == 'fmupload') { %>class="active" <% } %>>
-                                        <a href="fm_file_upload.html">File Upload</a>
+                                    <li class="maincat <% if (htmlWebpackPlugin.options.submenu == 'fmckeditor') { %>active<% } %>">
+                                        <a href="#"><span class="menu-text">CKEditor</span></a>
+                                        <div class="subcat">
+                                            <ul>
+                                                <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditorclassic') { %>class="active" <% } %>>
+                                                    <a href="fm_ckeditor_classic.html">Classic</a>
+                                                </li>
+                                                <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditorinline') { %>class="active" <% } %>>
+                                                    <a href="fm_ckeditor_inline.html">Inline</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
-                                    <li <% if (htmlWebpackPlugin.options.submenu == 'fmdropzone') { %>class="active" <% } %>>
-                                        <a href="fm_dropzone.html">Dropzone Upload</a>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'fmeditors') { %>class="active" <% } %>>
+                                        <a href="fm_editors.html">Form Editors</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown <% if (htmlWebpackPlugin.options.topmenu == 'ch') { %>active<% } %>">
+                        <li class="maincat <% if (htmlWebpackPlugin.options.topmenu == 'ch') { %>active<% } %>">
                             <a href="#">
                                 <i class="ti-bar-chart"></i>
                                 <span class="menu-text">Charts</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li <% if (htmlWebpackPlugin.options.submenu == 'chapex') { %>class="active" <% } %>>
                                         <a href="ch_apexcharts.html">Apex Charts</a>
@@ -123,12 +133,12 @@
                         <li class="header-menu">
                             <span>Extra</span>
                         </li>
-                        <li class="sidebar-dropdown">
+                        <li class="maincat">
                             <a href="#">
                                 <i class="ti-file"></i>
                                 <span class="menu-text">Pages</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li>
                                         <a href="page_login.html" target="_blank">Login</a>
@@ -145,16 +155,16 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="sidebar-dropdown">
+                        <li class="maincat">
                             <a href="#">
                                 <i class="ti-layers-alt"></i>
                                 <span class="menu-text">Multi-Levels Menu</span>
                             </a>
-                            <div class="sidebar-submenu">
+                            <div class="subcat">
                                 <ul>
                                     <li>
                                         <a href="javascript:;">Submenu Level 1</a>
-                                        <div class="sidebar-submenu">
+                                        <div class="subcat">
                                             <ul>
                                                 <li><a href="javascript:;">Submenu Level 2</a></li>
                                                 <li><a href="javascript:;">Submenu Level 2</a></li>

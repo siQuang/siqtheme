@@ -37,14 +37,14 @@ const siQapp = function() {
         });
     }
 
-    // handle sidebar-dropdown
+    // handle maincat active state
     var handleDropdownMenu = function() {
-        $('.sidebar-dropdown > a').click(function () {
+        $('.maincat > a').click(function () {
             if ($(this).parent().hasClass('active')) {
-                $('.sidebar-dropdown').removeClass('active');
+                $('.maincat').removeClass('active');
                 $(this).parent().removeClass('active');
             } else {
-                $('.sidebar-dropdown').removeClass('active');
+                $('.maincat').removeClass('active');
                 $(this).parent().addClass('active');
             }
         });

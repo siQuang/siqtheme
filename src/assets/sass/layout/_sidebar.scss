@@ -63,7 +63,7 @@
             }
         }
 
-        .sidebar-dropdown {
+        .maincat {
             > a:after {
                 font-family: "FontAwesome";
                 font-weight: 900;
@@ -83,7 +83,7 @@
 
             }
 
-            .sidebar-submenu {
+            .subcat {
                 visibility: hidden; /* hide sub-menu */
                 max-height: 0px;
                 opacity: 0;
@@ -128,7 +128,7 @@
             }
 
             &.active {
-                .sidebar-submenu {
+                .subcat {
                     visibility: visible; /* shows sub-menu */
                     max-height: 1000px;
                     opacity: 1;

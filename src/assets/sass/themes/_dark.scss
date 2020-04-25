@@ -88,9 +88,9 @@ body.theme-dark {
 	    		color: $dark-sidebar-header-menu-color;
 	    	}
 
-	    	.sidebar-dropdown {
+	    	.maincat {
 		    	&.active {
-	                .sidebar-submenu {
+	                .subcat {
 	                    background-color: darken($dark-sidebar-bg-color, 3%);
 	                }
 	            }

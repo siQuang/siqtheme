@@ -84,9 +84,9 @@ body.theme-blue {
 	    		color: $blue-sidebar-header-menu-color;
 	    	}
 
-	    	.sidebar-dropdown {
+	    	.maincat {
 		    	&.active {
-	                .sidebar-submenu {
+	                .subcat {
 	                    background-color: darken($blue-sidebar-bg-color, 3%);
 	                }
 	            }
@@ -109,7 +109,7 @@ body.theme-blue {
 					}
 				}
 
-				.sidebar-submenu {
+				.subcat {
 					background: $blue-collapsed-active-bg-color;
 				}
 
