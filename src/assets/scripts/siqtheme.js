@@ -38,13 +38,23 @@ const siQapp = function() {
     }
 
     // handle maincat active state
-    var handleDropdownMenu = function() {
+    var handleActiveMenu = function() {
         $('.maincat > a').click(function () {
             if ($(this).parent().hasClass('active')) {
                 $('.maincat').removeClass('active');
                 $(this).parent().removeClass('active');
             } else {
                 $('.maincat').removeClass('active');
+                $(this).parent().addClass('active');
+            }
+        });
+
+        $('.tier1 > a').click(function () {
+            if ($(this).parent().hasClass('active')) {
+                $('.tier1').removeClass('active');
+                $(this).parent().removeClass('active');
+            } else {
+                $('.tier1').removeClass('active');
                 $(this).parent().addClass('active');
             }
         });
@@ -125,7 +135,7 @@ const siQapp = function() {
         init: function() {
 
             handleThemeColor();
-            handleDropdownMenu();
+            handleActiveMenu();
             handleCollapsedSidebar();
             handleSlideSidebar();
             handleRightSidebar();

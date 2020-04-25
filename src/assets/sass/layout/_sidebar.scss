@@ -63,24 +63,27 @@
             }
         }
 
+        .menu-arrow {
+            font-family: "FontAwesome";
+            font-weight: 900;
+            content: "\f105";
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: center;
+            background: 0 0;
+            position: absolute;
+            right: 15px;
+            top: 14px;
+            @include transition(transform 0.3s ease);
+        }
+
         .maincat {
             > a:after {
-                font-family: "FontAwesome";
-                font-weight: 900;
-                content: "\f105";
-                display: inline-block;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                text-align: center;
-                background: 0 0;
-                position: absolute;
-                right: 15px;
-                top: 14px;
-                @include transition(transform 0.3s ease);
-
+                @extend .menu-arrow;
             }
 
             .subcat {
@@ -123,6 +126,34 @@
 
                     &.active {
                         font-weight: 700;
+                    }
+                }
+
+                .tier1 {
+                    > a:after {
+                        @extend .menu-arrow;
+                        top: 5px;
+                    }
+
+                    .subcat {
+                        visibility: hidden; /* hide sub-menu */
+                        max-height: 0px;
+                        opacity: 0;
+                        @include transition(all 0.5s ease);
+                    }
+
+                    &.active {
+                        .subcat {
+                            visibility: visible; /* shows sub-menu */
+                            max-height: 1000px;
+                            opacity: 1;
+                            background-color: darken($default-sidebar-bg-color, 3%);
+                        }
+                    }
+
+                    &.active > a:after {
+                        transform: rotate(90deg);
+                        right: 15px;
                     }
                 }
             }

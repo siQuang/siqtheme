@@ -94,7 +94,15 @@ body.theme-dark {
 	                    background-color: darken($dark-sidebar-bg-color, 3%);
 	                }
 	            }
-		    }
+			}
+
+			.tier1 {
+		    	&.active {
+	                .subcat {
+	                    background-color: darken($dark-sidebar-bg-color, 3%) !important;
+	                }
+	            }
+			}
 	    }
 	}
 
