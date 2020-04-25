@@ -76,7 +76,7 @@ label.error {
     grid-template-columns: $sidebar-width auto;
     grid-template-rows: $header-height auto $footer-height;
     grid-template-areas: "header header" "sidebar main" "footer footer";
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     // .sidebar-content {
     //     width: $sidebar-width;

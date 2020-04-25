@@ -3,7 +3,8 @@
     background-color: $default-main-bg-color;
     border-top-right-radius: $main-body-radius;
     border-bottom-right-radius: $main-body-radius;
-    padding: 16px;
+	padding: 16px;
+	overflow-x: hidden;
 }
 
 #widget-mini {
