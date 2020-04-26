@@ -6,6 +6,7 @@ let themeName       = "siQtheme",
     tablesMenu      = "tb",
     formsMenu       = "fm",
     chartsMenu      = "ch";
+    pagesMenu       = "pg";
 
 /*
  |--------------------------------------------------------------------------
@@ -144,5 +145,11 @@ module.exports = [
         filename: "ch_apexcharts.html",
         topmenu: chartsMenu,
         submenu: "chapex"
+    }, {
+        title: themeName + " - Login",
+        template: sourcePath + "pg_login.ejs",
+        filename: "pg_login.html",
+        topmenu: pagesMenu,
+        submenu: "pglogin"
     }
 ];

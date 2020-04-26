@@ -116,7 +116,10 @@ mix.styles([
     ], 'public/assets/scripts/pages/fm_ckeditor_document.js')
 
     // Apex Charts
-    .js('src/assets/scripts/pages/ch_apexcharts.js', 'assets/scripts/pages');
+    .js('src/assets/scripts/pages/ch_apexcharts.js', 'assets/scripts/pages')
+    
+    // Login page
+    .js('src/assets/scripts/pages/pg_login.js', 'assets/scripts/pages');
 
 /*
  |--------------------------------------------------------------------------

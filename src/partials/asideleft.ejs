@@ -139,24 +139,15 @@
                         <li class="header-menu">
                             <span>Extra</span>
                         </li>
-                        <li class="maincat">
+                        <li class="maincat <% if (htmlWebpackPlugin.options.topmenu == 'pg') { %>active<% } %>">
                             <a href="#">
                                 <i class="ti-file"></i>
                                 <span class="menu-text">Pages</span>
                             </a>
                             <div class="subcat">
                                 <ul>
-                                    <li>
-                                        <a href="page_login.html" target="_blank">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="page_profile.html">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="page_about.html">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="page_contact.html">Contact</a>
+                                    <li <% if (htmlWebpackPlugin.options.submenu == 'pglogin') { %>class="active" <% } %>>
+                                        <a href="pg_login.html" target="_blank">Login</a>
                                     </li>
                                 </ul>
                             </div>
@@ -187,14 +178,14 @@
                             </div>
                         </li>
                         <li>
-                            <a href="documenation.html">
+                            <a href="javascript:;">
                                 <i class="ti-agenda"></i>
                                 <span class="menu-text">Documentation</span>
                                 <span class="badge badge-pill badge-primary">Beta</span>
                             </a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="javascript:;">
                                 <i class="ti-calendar"></i>
                                 <span class="menu-text">Calendar</span>
                             </a>
