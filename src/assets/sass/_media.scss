@@ -1,9 +1,11 @@
+// computer
 @media screen and (min-width: $screen-sm-min) {
 	.sidebar {
         width: 100% !important;
     }
 }
 
+// tablet and mobile screen sizes
 @media screen and (max-width: $screen-sm-max) {
     /* collapsed sidebar */
     .grid-wrapper {
@@ -55,6 +57,21 @@
         z-index: $zindex-sidebar-slide;
         @include transition(all 0.3s ease);
 
+        .sidebar-menu {
+            .header-menu {
+                font-size: 18px !important;
+            }
+
+            ul li,
+            ul li a {
+                font-size: 16px;
+
+                i {
+                    margin-right: 14px;
+                }
+            }
+        }
+
         &.open {
             width: 40%;
         }
@@ -66,13 +83,14 @@
     }
 }
 
+// mobile screen sizes
 @media screen and (max-width: $screen-xs-max) {
     .grid-wrapper {
         margin: 0;
     }
 
     .header {
-        width: 100%;
+        width: 100vw;
 
         .brand {
             text-align: center;
@@ -93,13 +111,15 @@
     }
 
     .sidebar {
+        padding-bottom: 7rem;
+
         &.open {
-            width: 100%;
+            width: 100vw;
         }
     }
 
     .main {
-        width: 100%;
+        width: 100vw;
         margin-right: -40px;
         padding-left: 0;
         border-radius: 0;
@@ -107,6 +127,8 @@
     }
 
     #sidebar-right {
+        padding-bottom: 7rem;
+
         &.sidebar-open {
             right: 0;
             width: 100%;
