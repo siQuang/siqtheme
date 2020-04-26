@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "author": "siQuang (Simon Nguyen)",
   "license": "MIT",
-  "homepage": "https://siqtheme.3msquare.com",
-  "description": "Responsive admin template with Webpack Mix and Bootstrap 4",
+  "homepage": "https://github.com/siQuang/siqtheme",
+  "description": "Reponsive Admin Template with jQuery and Bootstrap 4",
   "main": "src/scripts/siqtheme.js",
   "scripts": {
     "dev": "npm run development",
