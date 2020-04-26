@@ -48,6 +48,11 @@
     "webpack": "^4.42.1"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-balloon": "^18.0.0",
+    "@ckeditor/ckeditor5-build-balloon-block": "^18.0.0",
+    "@ckeditor/ckeditor5-build-classic": "^18.0.0",
+    "@ckeditor/ckeditor5-build-decoupled-document": "^18.0.0",
+    "@ckeditor/ckeditor5-build-inline": "^18.0.0",
     "apexcharts": "^3.18.1",
     "bootstrap": "^4.4.1",
     "bootstrap-datepicker": "^1.9.0",
@@ -61,6 +66,7 @@
     "moment": "^2.24.0",
     "peity": "^3.3.0",
     "popper.js": "^1.16.1",
+    "summernote": "^0.8.16",
     "themify-icons-scss": "^1.0.0",
     "toastr": "^2.1.4"
   }

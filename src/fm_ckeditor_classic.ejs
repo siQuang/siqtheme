@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% include src/partials/styles.ejs %>
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">Forms</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">CKEditor</a></li>
+                        <li class="breadcrumb-item active">Classic</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p>CKEditor 5 provides every type of WYSIWYG editing solution imaginable. From editors similar to Google Docs and Medium,
+                            to Slack or Twitter like applications, all is possible within a single editing framework.</p>
+                            Visit the official CKEditor 5 to learn more: <a href="https://ckeditor.com/ckeditor-5/" class="card-link" target="_blank">https://ckeditor.com/ckeditor-5/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-pencil-alt"></i> Classic Editor Embeded Video
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <textarea name="editor-1" id="editor-1">
+                                <h2>Behind the word mountains</h2>
+                                <p>Far from the countries Vokalia and Consonantia, there live the blind texts.
+                                    Separated they live in Bookmarksgrove right at the coast.</p>
+                                <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful
+                                    Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of
+                                    blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                                <figure class="media">
+                                    <oembed url="https://youtu.be/cIk-Kxw_7Kc"></oembed>
+                                </figure>
+                                <p>Excerpt of Hans Zimmer's "Inception" Suite performed in Vienna on Oct 23 2012 with "Time" and "Dream is Collapsing" at
+                                film music concert "Hollywood in Vienna".</p>
+                            </textarea>
+                        </div>
+                        <div class="card-footer text-right">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-pencil-alt"></i> Classic Editor with Images
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <textarea name="editor-2" id="editor-2">
+                                <h2>Photos for everyone</h2>
+                                <p>Visit <a href="https://unsplash.com" target="_blank">https://unsplash.com</a> for some awesome images. Don't forget to credit the photographers!</p>
+                                <p><a href="https://unsplash.com/photos/I33riCqIWUA" target="_blank">Photo by Patrick Baum</a></p>
+                                <figure class="image"><img src="https://images.unsplash.com/photo-1484942835385-dcb3923c11e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80" alt="siQtheme Demo"/></figure>
+                                <p>All photos published on Unsplash can be used for free. You can use them for commercial and noncommercial purposes. You
+                                do not need to ask permission from or provide credit to the photographer or Unsplash, although it is appreciated when
+                                possible.</p>
+                            </textarea>
+                        </div>
+                        <div class="card-footer text-right">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-pencil-alt"></i> Classic Editor Large
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <textarea name="editor-3" id="editor-3">
+                                <h2>The three greatest things you learn from traveling</h2>
+                                <p>Like all the great things on earth traveling teaches us by example. Here are some of the most precious lessons I’ve
+                                    learned over the years of traveling.</p>
+                                <figure class="image ck-widget ck-widget_with-resizer image-style-side" contenteditable="false">
+                                    <img src="https://images.unsplash.com/photo-1587666146633-78b032acb7c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="siQtheme Demo">
+                                    <div class="ck ck-reset_all ck-widget__resizer" style="display: none;">
+                                        <div class="ck-widget__resizer__handle ck-widget__resizer__handle-top-left"></div>
+                                        <div class="ck-widget__resizer__handle ck-widget__resizer__handle-top-right"></div>
+                                        <div class="ck-widget__resizer__handle ck-widget__resizer__handle-bottom-right"></div>
+                                        <div class="ck-widget__resizer__handle ck-widget__resizer__handle-bottom-left"></div>
+                                        <div class="ck ck-size-view" style="display: none;"></div>
+                                    </div>
+                                    <figcaption class="ck-editor__editable ck-editor__nested-editable" data-placeholder="Enter image caption"
+                                        contenteditable="true">Leaving your comfort zone might lead you to such beautiful sceneries like this one.
+                                    </figcaption>
+                                </figure>
+                                <h3>Appreciation of diversity</h3>
+                                <p>Getting used to an entirely different culture can be challenging. While it’s also nice to learn about cultures online
+                                    or from books, nothing comes close to experiencing cultural diversity in person. You learn to appreciate each and
+                                    every single one of the differences while you become more culturally fluid.</p>
+                                <blockquote>
+                                    <p>The real voyage of discovery consists not in seeking new landscapes, but having new eyes.</p>
+                                    <p><strong>Marcel Proust</strong></p>
+                                </blockquote>
+                                <h3>Improvisation</h3>
+                                <p>Life doesn't allow us to execute every single plan perfectly. This especially seems to be the case when you travel.
+                                    You plan it down to every minute with a big checklist; but when it comes to executing it, something always comes up
+                                    and you’re left with your improvising skills. You learn to adapt as you go. Here’s how my travel checklist looks
+                                    now:</p>
+                                <ul class="todo-list">
+                                    <li><label class="todo-list__label" contenteditable="false"><input type="checkbox" checked="checked"></label>buy the
+                                        ticket&nbsp;</li>
+                                    <li><label class="todo-list__label" contenteditable="false"><input type="checkbox" checked="checked"></label>start
+                                        your adventure&nbsp;</li>
+                                </ul>
+                                <h3>Confidence</h3>
+                                <p>Going to a new place can be quite terrifying. While change and uncertainty makes us scared, traveling teaches us how
+                                    ridiculous it is to be afraid of something before it happens. The moment you face your fear and see there was
+                                    nothing to be afraid of, is the moment you discover bliss.</p>
+                            </textarea>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <% include src/partials/scripts.ejs %>
+    <script src="assets/scripts/pages/fm_ckeditor_classic.js"></script>
+</body>
+
+</html>

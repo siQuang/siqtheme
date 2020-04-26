@@ -39,9 +39,9 @@ const siQapp = function() {
 
     // handle menu active state
     var handleActiveMenu = function() {
-        var elems = ['.maincat', '.tier1'];
+        var classes = ['.maincat', '.tier1'];
         
-        $.each(elems, function(index, value) {
+        $.each(classes, function(index, value) {
             $(value + '>a').click(function () {
                 if ($(this).parent().hasClass('active')) {
                     $(value).removeClass('active');

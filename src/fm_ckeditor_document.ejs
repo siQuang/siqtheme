@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% include src/partials/styles.ejs %>
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html"><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">Forms</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:;">CKEditor</a></li>
+                        <li class="breadcrumb-item active">Document</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p>CKEditor 5 provides every type of WYSIWYG editing solution imaginable. From editors
+                                similar to Google Docs and Medium,
+                                to Slack or Twitter like applications, all is possible within a single editing
+                                framework.</p>
+                            Visit the official CKEditor 5 to learn more: <a href="https://ckeditor.com/ckeditor-5/"
+                                class="card-link" target="_blank">https://ckeditor.com/ckeditor-5/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-pencil-alt"></i> Decoupled Document
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="editor-toolbar"></div>
+                            <div name="editor" class="cke-document-style border" id="editor">
+                                <h2 style="text-align:center;">The Flavorful Tuscany Meetup</h2>
+                                <h3 style="text-align:center;">Welcome letter</h3>
+                                <p>Dear Guest,</p>
+                                <p>We are delighted to welcome you to the annual <i>Flavorful Tuscany Meetup</i> and hope you will enjoy the programme
+                                    as well as your stay at the <a href="https://ckeditor.com">Bilancino Hotel</a>.</p>
+                                <p>Please find below the full schedule of the event.</p>
+                                <figure class="table ck-widget ck-widget_with-selection-handle" contenteditable="false">
+                                    <div class="ck ck-widget__selection-handle"><svg class="ck ck-icon" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4 0v1H1v3H0V.5A.5.5 0 0 1 .5 0H4zm8 0h3.5a.5.5 0 0 1 .5.5V4h-1V1h-3V0zM4 16H.5a.5.5 0 0 1-.5-.5V12h1v3h3v1zm8 0v-1h3v-3h1v3.5a.5.5 0 0 1-.5.5H12z">
+                                            </path>
+                                            <path fill-opacity=".256" d="M1 1h14v14H1z"></path>
+                                            <g class="ck-icon__selected-indicator">
+                                                <path d="M7 0h2v1H7V0zM0 7h1v2H0V7zm15 0h1v2h-1V7zm-8 8h2v1H7v-1z"></path>
+                                                <path fill-opacity=".254" d="M1 1h14v14H1z"></path>
+                                            </g>
+                                        </svg></div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="ck-editor__editable ck-editor__nested-editable" style="background-color:hsl(0,0%,60%);"
+                                                    contenteditable="true" colspan="2"><span style="display:inline-block;"><span
+                                                            style="color:hsl(0,0%,100%);">Saturday, July 14</span></span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ck-editor__editable ck-editor__nested-editable"
+                                                    style="background-color:hsl(0,0%,90%);padding:1em;" contenteditable="true"><span
+                                                        style="display:inline-block;">9:30 AM - 11:30 AM</span></td>
+                                                <td class="ck-editor__editable ck-editor__nested-editable" style="padding:1em;" contenteditable="true">
+                                                    <p><strong>Americano vs. Brewed</strong> - “know your coffee” with:&nbsp;</p>
+                                                    <ul>
+                                                        <li>Giulia Bianchi</li>
+                                                        <li>Stefano Garau</li>
+                                                        <li>Giuseppe Russo</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck-editor__editable ck-editor__nested-editable"
+                                                    style="background-color:hsl(0,0%,90%);padding:1em;" contenteditable="true"><span
+                                                        style="display:inline-block;">1:00 PM - 3:00 PM</span></td>
+                                                <td class="ck-editor__editable ck-editor__nested-editable" style="padding:1em;" contenteditable="true">
+                                                    <p><strong>Pappardelle al pomodoro</strong> - live cooking</p>
+                                                    <p>Incorporate the freshest ingredients&nbsp;<br>with Rita Fresco</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck-editor__editable ck-editor__nested-editable"
+                                                    style="background-color:hsl(0,0%,90%);padding:1em;" contenteditable="true"><span
+                                                        style="display:inline-block;">5:00 PM - 8:00 PM</span></td>
+                                                <td class="ck-editor__editable ck-editor__nested-editable" style="padding:1em;" contenteditable="true">
+                                                    <span style="display:inline-block;"><strong>Tuscan vineyards at a glance</strong> -
+                                                        wine-tasting&nbsp;<br>with Frederico Riscoli</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </figure>
+                                <blockquote>
+                                    <p>The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during
+                                        an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs
+                                        passionate about their profession. I would certainly recommend to save the date in your calendar for this one!
+                                    </p>
+                                    <p>Angelina Calvino, food journalist</p>
+                                </blockquote>
+                                <p>Please arrive at the <a href="https://ckeditor.com">Bilancino Hotel</a> reception desk at least half an hour earlier
+                                    to make sure that the registration process goes as smoothly as possible.</p>
+                                <p>We look forward to welcoming you to the event.</p>
+                                <p><strong>Victoria Valc</strong></p>
+                                <p><strong>Event Manager</strong></p>
+                                <p><strong>Bilancino Hotel</strong></p>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            <button type="button" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <% include src/partials/scripts.ejs %>
+    <script src="assets/scripts/pages/fm_ckeditor_document.js"></script>
+</body>
+
+</html>

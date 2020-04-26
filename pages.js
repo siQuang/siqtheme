@@ -16,6 +16,7 @@ let themeName       = "siQtheme",
  | filename:    HTML filename with extension [.html]
  | topmenu:     Top menu category
  | submenu:     Submenu name (unique)
+ | submenu2:    (Optional) Submenu2 name (unique)
  */
 module.exports = [
     {
@@ -102,6 +103,41 @@ module.exports = [
         filename: "fm_control.html",
         topmenu: formsMenu,
         submenu: "fmcontrol"
+    }, {
+        title: themeName + " - CKEditor Classic",
+        template: sourcePath + "fm_ckeditor_classic.ejs",
+        filename: "fm_ckeditor_classic.html",
+        topmenu: formsMenu,
+        submenu: "fmckeditor",
+        submenu2: 'fmckeditorclassic'
+    }, {
+        title: themeName + " - CKEditor Balloon",
+        template: sourcePath + "fm_ckeditor_balloon.ejs",
+        filename: "fm_ckeditor_balloon.html",
+        topmenu: formsMenu,
+        submenu: "fmckeditor",
+        submenu2: 'fmckeditorballoon'
+    }, {
+        title: themeName + " - CKEditor Balloon Block",
+        template: sourcePath + "fm_ckeditor_block.ejs",
+        filename: "fm_ckeditor_block.html",
+        topmenu: formsMenu,
+        submenu: "fmckeditor",
+        submenu2: 'fmckeditorblock'
+    }, {
+        title: themeName + " - CKEditor Inline",
+        template: sourcePath + "fm_ckeditor_inline.ejs",
+        filename: "fm_ckeditor_inline.html",
+        topmenu: formsMenu,
+        submenu: "fmckeditor",
+        submenu2: 'fmckeditorinline'
+    }, {
+        title: themeName + " - CKEditor Document",
+        template: sourcePath + "fm_ckeditor_document.ejs",
+        filename: "fm_ckeditor_document.html",
+        topmenu: formsMenu,
+        submenu: "fmckeditor",
+        submenu2: 'fmckeditordocument'
     }, {
         title: themeName + " - Apex Charts",
         template: sourcePath + "ch_apexcharts.ejs",

@@ -36,12 +36,15 @@ mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
         },
         plugins: [
             ...pages.map(page => {
+                let sub2 = (page.submenu2 != 'undefined') ? page.submenu2 : '';
+
                 return new HtmlWebpackPlugin({
                     title: page.title,
                     template: page.template,
                     filename: page.filename,
                     topmenu: page.topmenu,
                     submenu: page.submenu,
+                    submenu2: sub2,
                     inject: false
                 })
             })
@@ -63,6 +66,8 @@ mix.styles([
         'node_modules/apexcharts/dist/apexcharts.js',
         'src/assets/scripts/pages/dashboard1.js'
     ], 'public/assets/scripts/pages/dashboard1.js')
+
+    // Date & Time Picker
     .styles([
         'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css',
         'node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css'
@@ -72,11 +77,45 @@ mix.styles([
         'node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js',
         'src/assets/scripts/pages/cp_datetime.js'
     ], 'public/assets/scripts/pages/cp_datetime.js')
+
+    // Bootstrap Cards
     .js('src/assets/scripts/pages/ui_card.js', 'assets/scripts/pages')
+
+    // Bootstrap Modals
     .js('src/assets/scripts/pages/ui_modal.js', 'assets/scripts/pages')
+
+    // Toastr
     .js('src/assets/scripts/pages/ui_toastr.js', 'assets/scripts/pages')
+
+    // Datatables
     .js('src/assets/scripts/pages/tb_datatables.js', 'assets/scripts/pages')
+
+    // Form Control 
     .js('src/assets/scripts/pages/fm_control.js', 'assets/scripts/pages')
+
+    // CKEditor
+    .scripts([
+        'node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js',
+        'src/assets/scripts/pages/fm_ckeditor_classic.js'
+    ], 'public/assets/scripts/pages/fm_ckeditor_classic.js')
+    .scripts([
+        'node_modules/@ckeditor/ckeditor5-build-balloon/build/ckeditor.js',
+        'src/assets/scripts/pages/fm_ckeditor_balloon.js'
+    ], 'public/assets/scripts/pages/fm_ckeditor_balloon.js')
+    .scripts([
+        'node_modules/@ckeditor/ckeditor5-build-balloon-block/build/ckeditor.js',
+        'src/assets/scripts/pages/fm_ckeditor_block.js'
+    ], 'public/assets/scripts/pages/fm_ckeditor_block.js')
+    .scripts([
+        'node_modules/@ckeditor/ckeditor5-build-inline/build/ckeditor.js',
+        'src/assets/scripts/pages/fm_ckeditor_inline.js'
+    ], 'public/assets/scripts/pages/fm_ckeditor_inline.js')
+    .scripts([
+        'node_modules/@ckeditor/ckeditor5-build-decoupled-document/build/ckeditor.js',
+        'src/assets/scripts/pages/fm_ckeditor_document.js'
+    ], 'public/assets/scripts/pages/fm_ckeditor_document.js')
+
+    // Apex Charts
     .js('src/assets/scripts/pages/ch_apexcharts.js', 'assets/scripts/pages');
 
 /*
