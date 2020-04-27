@@ -97,10 +97,20 @@ Import styles to app.scss
 @import '~siqtheme/src/assets/sass/siqtheme';
 ```
 
-Create a new view file (i.e. test.blade.php) and copy the content from the sample.html in:
+Create a new view file (i.e. test.blade.php) and copy the content from the sample.html:
 
 ```
 node_modules/siqtheme/src/sample.html
+```
+
+Replace the stylesheet link and script in your new file with the correct link and script for your application.
+
+``` bash
+# replace this line to point to your style
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+# replace this line to point to your script
+<script src="{{ asset('js/app.js') }}"></script>
 ```
 
 Add a new route
