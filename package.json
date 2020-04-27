@@ -5,14 +5,15 @@
   "license": "MIT",
   "homepage": "https://github.com/siQuang/siqtheme",
   "description": "Reponsive Admin Template with jQuery and Bootstrap 4",
-  "main": "src/scripts/siqtheme.js",
+  "main": "dist/js/siqtheme.js",
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dist": "cross-env MIX_BUILD=dist npm run production"
   },
   "keywords": [
     "admin",
