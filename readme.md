@@ -77,3 +77,37 @@ siqtheme/
 ├── pages.js
 └── webpack.mix.js
 ```
+## Using siQtheme with Laravel
+
+Install the siQtheme package
+
+``` bash
+$ npm i siqtheme
+```
+
+Add to bootstrap.js file in resources directory
+
+``` bash
+require('siqtheme');
+```
+
+Import styles to app.scss
+
+``` bash
+@import '~siqtheme/src/assets/sass/siqtheme';
+```
+
+Create a new view file (i.e. test.blade.php) and copy the content from the sample.html in:
+
+```
+node_modules/siqtheme/src/sample.html
+```
+
+Add a new route
+
+``` bash
+Route::get('/test', function() {
+	return view('test');
+});
+```
+And thats it!
