@@ -18,7 +18,7 @@ const siQapp = function() {
 		 * server-side script to toggle the
 		 * theme class on body.
 		 **/
-        // if (App.localStorageSupport()) {
+        // if (siQapp.localStorageSupport()) {
         // 	var appTheme = localStorage.getItem('appTheme');
         // 	if (appTheme !== null || appTheme !== '') {
         // 		$('body').removeClass().addClass(appTheme);
@@ -31,7 +31,7 @@ const siQapp = function() {
             $('body').removeClass().addClass(theme);
 
             // store theme in localstorage
-            // if (App.localStorageSupport()) {
+            // if (siQapp.localStorageSupport()) {
             // 	localStorage.setItem('appTheme', theme);
             // }
         });
@@ -144,6 +144,18 @@ const siQapp = function() {
 
             // close alert message
             $('#alertWrap').delay(5000).fadeTo(1000, 0.01).slideUp(500);
+        },
+        
+        // check if localstorage is available
+        localStorageSupport: function () {
+            var test = 'test';
+            try {
+                localStorage.setItem(test, test);
+                localStorage.removeItem(test);
+                return true;
+            } catch (e) {
+                return false;
+            }
         }
     };
 
