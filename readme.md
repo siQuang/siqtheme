@@ -1,4 +1,4 @@
-# siQtheme Reponsive Admin Template with jQuery and Bootstrap 4
+# siQtheme Reponsive Admin Template with jQuery and Bootstrap 4 with Dark and Light Mode
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://img.shields.io/npm/v/siqtheme/latest.svg)](https://www.npmjs.com/package/siqtheme)
