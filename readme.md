@@ -1,11 +1,14 @@
 # siQtheme Reponsive Admin Template with jQuery and Bootstrap 4 - Dark and Light Mode
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/release/siQuang/siqtheme.svg)](https://github.com/siQuang/siqtheme/releases)
 [![npm version](https://img.shields.io/npm/v/siqtheme/latest.svg)](https://www.npmjs.com/package/siqtheme)
 
 As the world is going into lockdown because of the covid-19 pandemic, why not take this opportunity while staying at home to create something for the community and share it with the world!
 
 siQtheme is a responsive admin template created with Bootstrap 4 and using Webpack with Laravel-Mix. Webpack is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included.
+
+**View demo here [https://siqtheme.siquang.com](https://siqtheme.siquang.com)**
 
 !["siQtheme Dark"](https://siqtheme.3msquare.com/assets/img/siqtheme_dark.png "siQtheme Dark")
 
