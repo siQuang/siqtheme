@@ -9,6 +9,7 @@ As the world is going into lockdown because of the covid-19 pandemic, why not ta
 siQtheme is a responsive admin template created with Bootstrap 4 and using Webpack with Laravel-Mix. Webpack is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included.
 
 Author: Simon Nguyen (siQuang)
+
 Website: https://siquang.com
 
 **View demo here [https://siqtheme.siquang.com](https://siqtheme.siquang.com)**
@@ -113,10 +114,10 @@ Replace the stylesheet link and script in your new file with the correct link an
 
 ``` bash
 # replace this line to point to your style
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="assets/css/app.css" rel="stylesheet">
 
 # replace this line to point to your script
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="assets/scripts/app.js"></script>
 ```
 
 Add a new route
