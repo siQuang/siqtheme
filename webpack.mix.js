@@ -16,33 +16,20 @@ if (process.env.MIX_BUILD === 'dist') {
 } else {
     mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
         .js('src/assets/scripts/siqtheme.js', 'assets/scripts/')
+        .setPublicPath('public')
         .browserSync({
             proxy: 'siqtheme.test',
             files: ['public/**/*.html', 'public/assets/css/**/*.css', 'public/assets/scripts/**/*.js']
         })
         .copyDirectory('src/assets/img', 'public/assets/img')
-        .copyDirectory('src/assets/fonts', 'public/assets/fonts')
         .webpackConfig({
-            output: {
-                path: path.resolve(__dirname, 'public')
-            },
-            module: {
-                rules: [
-                    {
-                        test: /\.ejs$/,
-                        use: {
-                            loader: 'ejs-compiled-loader'
-                        }
-                    }
-                ]
-            },
             plugins: [
                 ...pages.map(page => {
                     let sub2 = (page.submenu2 != 'undefined') ? page.submenu2 : '';
 
                     return new HtmlWebpackPlugin({
                         title: page.title,
-                        template: page.template,
+                        template: '!!ejs-compiled-loader!'+page.template,
                         filename: page.filename,
                         topmenu: page.topmenu,
                         submenu: page.submenu,
@@ -51,10 +38,10 @@ if (process.env.MIX_BUILD === 'dist') {
                     })
                 })
             ]
-        })
-        .options({
-            processCssUrls: false
         });
+
+    // Fonts path
+    mix.config.fileLoaderDirs.fonts = 'assets/fonts';
 
     /*
      |--------------------------------------------------------------------------
