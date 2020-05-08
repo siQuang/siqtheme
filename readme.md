@@ -128,3 +128,13 @@ Route::get('/test', function() {
 });
 ```
 And thats it!
+
+## Using siQtheme with Codeigniter 3
+
+I've written an article on integrating siQtheme with Laravel-Mix for Codeigniter 3 that you can follow below.
+
+**[Integrating Laravel-Mix and siQtheme with Codeigniter 3](https://medium.com/@simonquang/integrating-laravel-mix-and-siqtheme-with-codeigniter-3-606191a5eda3)**
+
+Or you can download the completed project below.
+
+**[Download CI3-siQtheme](https://github.com/siQuang/ci3-siqtheme)**
