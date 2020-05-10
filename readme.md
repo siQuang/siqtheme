@@ -14,9 +14,9 @@ Website: https://siquang.com
 
 **View demo here [https://siqtheme.siquang.com](https://siqtheme.siquang.com)**
 
-!["siQtheme Dark"](https://siqtheme.3msquare.com/assets/img/siqtheme_dark.png "siQtheme Dark")
+!["siQtheme Dark"](https://siqtheme.siquang.com/assets/img/siqtheme_dark.png "siQtheme Dark")
 
-!["siQtheme Light"](https://siqtheme.3msquare.com/assets/img/siqtheme_light.png "siQtheme Light")
+!["siQtheme Light"](https://siqtheme.siquang.com/assets/img/siqtheme_light.png "siQtheme Light")
 
 ## Installation
 

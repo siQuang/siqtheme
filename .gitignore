@@ -1,7 +1,6 @@
 # IDE Files
 #-------------------------
 .DS_Store
-.idea/*
 sftp-config.json
 sftp.json
 *.code-workspace
@@ -17,9 +16,6 @@ sftp.json
 # Project Files
 #-------------------------
 .sass-cache
-.idea
-nbproject
-nbproject/private
 *.log
 *.zip
 
@@ -29,4 +25,3 @@ node_modules
 package-lock.json
 vendor
 public
-siqtheme_demo
