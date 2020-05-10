@@ -5,8 +5,9 @@ let themeName       = "siQtheme",
     uiElementsMenu  = "ui",
     tablesMenu      = "tb",
     formsMenu       = "fm",
-    chartsMenu      = "ch";
-    pagesMenu       = "pg";
+    chartsMenu      = "ch",
+    pagesMenu       = "pg",
+    extraMenu       = "dc";
 
 /*
  |--------------------------------------------------------------------------
@@ -151,5 +152,11 @@ module.exports = [
         filename:   pagesMenu + "_login.html",
         topmenu:    pagesMenu,
         submenu:    pagesMenu + "login"
+    }, {
+        title: themeName + " Documentation",
+        template: sourcePath + "documentation.ejs",
+        filename: "documentation.html",
+        topmenu: extraMenu,
+        submenu: "documentation"
     }
 ];

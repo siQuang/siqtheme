@@ -124,7 +124,9 @@ if (process.env.MIX_BUILD === 'dist') {
         .scripts('node_modules/apexcharts/dist/apexcharts.js', 'public/assets/vendors/apexcharts/apexcharts.js')
         .styles('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css', 'public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.css')
         .scripts('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.js')
-        .scripts('node_modules/peity/jquery.peity.min.js', 'public/assets/vendors/peity/jquery.peity.min.js');
+        .scripts('node_modules/peity/jquery.peity.min.js', 'public/assets/vendors/peity/jquery.peity.min.js')
+        .styles('node_modules/code-prettify/styles/desert.css', 'public/assets/vendors/code-prettify/prettify.css')
+        .scripts('node_modules/code-prettify/loader/run_prettify.js', 'public/assets/vendors/code-prettify/prettify.js');
 }
 
 // Full API

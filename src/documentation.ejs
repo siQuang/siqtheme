@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include src/partials/meta.ejs %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% include src/partials/styles.ejs %>
+    <link rel="stylesheet" href="assets/vendors/code-prettify/prettify.css">
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href=""><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item active">Documentation</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="caption">
+                                <i class="ti-agenda"></i>
+                                Documentation
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Using siQtheme with packages manager</h4>
+                            <p class="card-text">siQtheme is developed as a package, mainly to use with a packages manager like npm or yarn. Of course, you can still use traditionally read below to do this. The quickest way to install siQtheme is using a package manager then import the styles and javascript in your project.</p>
+                            <p class="card-text">If you need help installing NPM and Node on your machine, go here to read the documentation on <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">installing Node.js and NPM</a>.</p>
+
+                            <p class="card-text bold">Install siQtheme with NPM</p>
+
+<pre class="prettyprint">
+    npm i siqtheme
+</pre>
+
+                            <p class="card-text"><span class="bold">Import style</span><br> You would want to import the styles to your main SASS file, example app.scss.</p>
+
+<pre class="prettyprint">
+    ## import styles
+    @import '~siqtheme/src/sass/siqtheme';
+</pre>
+
+                            <p class="card-text"><span class="bold">Import javascript</span><br> Add this to your main JS file like app.js.</p>
+
+<pre class="prettyprint">
+    ## import script
+    require('siqtheme');
+</pre>
+
+                            <p class="card-text">Copy the content from <span class="text-success">node_modules/siqtheme/src/sample.html</span> onto your document to see the theme. Make sure to change the stylesheet and javascript file paths to yours.</p>
+
+                            <p class="card-text">And that's it! You would just style your page normally as you would with Bootstrap. Use the browser's developer tool to inspect the elements and classes.</p>
+                            
+                            <div class="card card-carolina my-5">
+                                <div class="card-body">
+                                    <p class="card-text">siQtheme comes pre-compiled with jQuery, Bootstrap 4, Fontawesome 4.7, Themify Icons, Datatables, Moment, and Toastr ready to use. You do not need to include these assets in your document.</p>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <h4 class="card-title">Using siQtheme the traditional way</h4>
+
+                            <p class="card-text">You still need to have node.js and npm install on your machine to compile the source to a build. Download the theme from Github, extract the file and run the following commands in terminal (Mac) or command prompt (Windows) from the project directory.</p>
+
+                            <p class="card-text"><a href="https://github.com/siQuang/siqtheme" class="card-link" target="_blank">Download siQtheme</a></p>
+
+<pre class="prettyprint">
+    ## install dependencies
+    npm install
+
+    ## compile as development (uncrompress files)
+    npm run dev
+
+    ## compile for production (compressed files)
+    npm run prod
+</pre>
+
+                        <p class="card-text">Once you compiled the source, you should see a <span class="text-carolina">public</span> directory with all the HTML, CSS, JS files. Include the stylesheet and javascript in your document as you normally do. Copy the content from <span class="text-success">node_modules/siqtheme/src/sample.html</span> onto your document to see the theme.</p>
+
+                        <hr class="mt-5">
+
+                        <h4 class="card-title">Resource Articles</h4>
+
+                        <p class="card-text">I've written a couples articles explaining the process and how to integrate with a PHP framework below. Click on the article to learn more.</p>
+
+                        <div class="row" id="articles"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <% include src/partials/scripts.ejs %>
+    <script src="assets/vendors/code-prettify/prettify.js"></script>
+
+    <script>
+        var feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@simonquang';
+
+        $.get(feedUrl, function(data) {
+
+            // filter only articles and not comments
+            var posts = data.items.filter(item => item.categories.length > 0);
+
+            var articles = '';
+            $.each(posts, function(index, obj) {
+                var content = $(obj.content).text();
+                content = content.slice(0, 300) + '...';
+
+                articles += `
+                    <div class="col-md-6">
+                        <div class="card">
+                            <a href="${obj.link}" target="_blank"><img src="${obj.thumbnail}" class="card-img-top" height="400" alt="${obj.title}"></a>
+                            <div class="card-body">
+                                <h2 class="card-title">${obj.title}</h2>
+                                <p class="card-text">${content}<p>
+                                <p class="card-text">Written By: <span class="bold">${obj.author}</span><p>
+                                <p class="card-text">
+                                    <a href="${obj.link}" target="_blank">Continue reading</a>
+                                <p>
+                            </div>
+                        </div>
+                    </div>`;
+
+            });
+
+            $('#articles').html(articles);
+
+            // console.log(posts);
+        });
+    </script>
+</body>
+
+</html>
