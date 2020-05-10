@@ -299,6 +299,40 @@ var Dashboard1 = function() {
         var chart2 = new ApexCharts(document.querySelector("#sparkline-chart2"), options);
         chart2.render();
     }
+
+    var fetchRssArticles = function() {
+        var feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@simonquang';
+
+        $.get(feedUrl, function (data) {
+
+            // filter only articles and not comments
+            var posts = data.items.filter(item => item.categories.length > 0);
+
+            var articles = '';
+            $.each(posts, function (index, obj) {
+                var content = $(obj.content).text();
+                content = content.slice(0, 300) + '...';
+
+                articles += `
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <a href="${obj.link}" target="_blank"><img src="${obj.thumbnail}" class="card-img-top" height="400" alt="${obj.title}"></a>
+                            <div class="card-body">
+                                <h2 class="card-title">${obj.title}</h2>
+                                <p class="card-text">${content}<p>
+                                <p class="card-text">Written By: <span class="bold">${obj.author}</span><p>
+                                <p class="card-text">
+                                    <a href="${obj.link}" target="_blank">Continue reading</a>
+                                <p>
+                            </div>
+                        </div>
+                    </div>`;
+
+            });
+
+            $('#articles').html(articles);
+        });
+    }
     
     return {
         init: function() {
@@ -307,6 +341,7 @@ var Dashboard1 = function() {
             expensesChart();
             sparklineChart1();
             sparklineChart2();
+            fetchRssArticles();
         }
     }
 }();
