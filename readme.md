@@ -6,13 +6,11 @@
 
 As the world is going into lockdown because of the covid-19 pandemic, why not take this opportunity while staying at home to create something for the community and share it with the world!
 
-siQtheme is a responsive admin template created with Bootstrap 4 and using Webpack with Laravel-Mix. Webpack is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included.
+siQtheme is a responsive admin template created with Bootstrap 4 and using Webpack / Laravel-Mix to bundle the assets. It's best to use it with a packages manager like npm or yarn and pull into your project. However, you can install the theme traditionally by compiling the source into a public build. Webpack is a module bundler primarily for JavaScript, but it can transform front-end assets like HTML, CSS, and images if the corresponding loaders are included.
 
-Author: Simon Nguyen (siQuang)
+Author: Simon Nguyen - [siQuang](https://siquang.com)
 
-Website: https://siquang.com
-
-**View demo here [https://siqtheme.siquang.com](https://siqtheme.siquang.com)**
+**View demo here [https://siqtheme.com](https://siqtheme.com)**
 
 !["siQtheme Dark"](https://siqtheme.siquang.com/assets/img/siqtheme_dark.png "siQtheme Dark")
 
