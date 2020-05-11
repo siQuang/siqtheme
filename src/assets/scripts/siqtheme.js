@@ -26,7 +26,7 @@ const siQapp = function() {
         // }
 
         $('body').on('click', '.switch-theme', function() {
-            var theme = $(this).attr('id');
+            var theme = $(this).data('theme');
 
             $('body').removeClass().addClass(theme);
 

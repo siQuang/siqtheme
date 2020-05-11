@@ -300,7 +300,18 @@ var Dashboard1 = function() {
         chart2.render();
     }
 
+    var handleThemeSwitchTab = function() {
+        $('#theme-tab').hover(function() {
+            $(this).toggleClass('open');
+        });
+    }
+
     var toastrDemo = function() {
+        toastr.options = {
+            "progressBar": true,
+            "positionClass": "toast-top-center"
+        }
+
         setTimeout(function () {
             toastr.success('Let your ideas fly high!');
         }, 2000);
@@ -355,6 +366,7 @@ var Dashboard1 = function() {
             expensesChart();
             sparklineChart1();
             sparklineChart2();
+            handleThemeSwitchTab();
             toastrDemo();
             fetchRssArticles();
         }
