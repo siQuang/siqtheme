@@ -125,6 +125,15 @@ const siQapp = function() {
         });
     }
 
+    var handlePreloader = function () {
+        var preloader = $('#preloader');
+        if (preloader.length) {
+            preloader.delay(100).fadeOut('slow', function () {
+                $(this).remove();
+            });
+        }
+    }
+
     return {
         init: function() {
 
@@ -135,6 +144,7 @@ const siQapp = function() {
             handleRightSidebar();
             handleTopSearch();
             handleTopBarTransition();
+            handlePreloader();
 
             // initialize tooltips
             $('[data-toggle="tooltip"]').tooltip();
