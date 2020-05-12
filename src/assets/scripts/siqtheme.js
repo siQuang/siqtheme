@@ -9,6 +9,19 @@ require("simplebar");
 
 const siQapp = function() {
 
+    // handle preloader
+    var handlePreloader = function () {
+        var preloader = $('#preloader');
+        if (preloader.length) {
+            preloader.delay(100).fadeOut('slow', function () {
+                $(this).remove();
+            });
+
+            // change the body overflow to auto
+            $('body').css({ 'overflow': 'auto' });
+        }
+    }
+
     // handle theme switch
     var handleThemeColor = function() {
 		/**
@@ -126,18 +139,10 @@ const siQapp = function() {
         });
     }
 
-    var handlePreloader = function () {
-        var preloader = $('#preloader');
-        if (preloader.length) {
-            preloader.delay(100).fadeOut('slow', function () {
-                $(this).remove();
-            });
-        }
-    }
-
     return {
         init: function() {
 
+            handlePreloader();
             handleThemeColor();
             handleActiveMenu();
             handleCollapsedSidebar();
@@ -145,7 +150,6 @@ const siQapp = function() {
             handleRightSidebar();
             handleTopSearch();
             handleTopBarTransition();
-            handlePreloader();
 
             // initialize tooltips
             $('[data-toggle="tooltip"]').tooltip();
