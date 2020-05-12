@@ -14,6 +14,8 @@ if (process.env.MIX_BUILD === 'dist') {
             processCssUrls: false
         });
 } else {
+    let googleAnalytics = (mix.inProduction()) ? true : false;
+
     mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
         .js('src/assets/scripts/siqtheme.js', 'assets/scripts/')
         .setPublicPath('public')
@@ -34,6 +36,7 @@ if (process.env.MIX_BUILD === 'dist') {
                         topmenu: page.topmenu,
                         submenu: page.submenu,
                         submenu2: sub2,
+                        analytics: googleAnalytics,
                         inject: false
                     })
                 })
