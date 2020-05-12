@@ -224,15 +224,6 @@ label.error {
 .scrollbox-md,
 .scrollbox-lg {
     overflow: auto;
-
-    &::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: $color-gray-300;
-        border-radius: 20px;
-    }
 }
 
 .scrollbox-lg {

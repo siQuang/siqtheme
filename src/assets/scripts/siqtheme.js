@@ -5,6 +5,7 @@ require("datatables.net-bs4");
 require("datatables.net-responsive-bs4");
 window.moment = require("moment");
 window.toastr = require("toastr/toastr");
+require("simplebar");
 
 const siQapp = function() {
 
