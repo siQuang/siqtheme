@@ -156,7 +156,16 @@ body.theme-dark {
 
 	    ol.breadcrumb {
 	    	border-bottom-color: $dark-breadcrumb-border-color;
-	    }
+		}
+		
+		// scrollbox
+		.scrollbox-sm,
+		.scrollbox-md,
+		.scrollbox-lg {
+			&::-webkit-scrollbar-thumb {
+				background-color: $color-gray-700;
+			}
+		}
 	}
 
 	// ---------------------------------------------

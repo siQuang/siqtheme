@@ -220,19 +220,31 @@ label.error {
 }
 
 // scrollbox
+.scrollbox-sm,
+.scrollbox-md,
+.scrollbox-lg {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-gray-300;
+        border-radius: 20px;
+    }
+}
+
 .scrollbox-lg {
     height: 400px;
-    overflow-y: scroll;
 }
 
 .scrollbox-md {
     height: 300px;
-    overflow-y: scroll;
 }
 
 .scrollbox-sm {
     height: 200px;
-    overflow-y: scroll;
 }
 
 // theme-switch tab
