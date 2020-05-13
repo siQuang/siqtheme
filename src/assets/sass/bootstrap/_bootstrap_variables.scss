@@ -128,7 +128,6 @@ $theme-color-interval:      8% !default;
 // siqtheme modified
 // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
 $yiq-contrasted-threshold:  200 !default;
-// $yiq-contrasted-threshold:  150 !default;
 
 // siqtheme modified
 // Customize the light and dark text colors for use in our YIQ color contrast function.
@@ -140,6 +139,8 @@ $escaped-characters: (
   ("<","%3c"),
   (">","%3e"),
   ("#","%23"),
+  ("(","%28"),
+  (")","%29"),
 ) !default;
 
 
@@ -278,9 +279,6 @@ $border-color:                $gray-300 !default;
 $border-radius:               .25rem !default;
 $border-radius-lg:            0.425rem !default;
 $border-radius-sm:            0.285rem !default;
-// $border-radius:               .25rem !default;
-// $border-radius-lg:            .3rem !default;
-// $border-radius-sm:            .2rem !default;
 
 $rounded-pill:                50rem !default;
 
@@ -482,7 +480,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 
 $btn-block-spacing-y:         .5rem !default;
 
-// // Allows for customizing button radius independently from global border radius
+// Allows for customizing button radius independently from global border radius
 $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
@@ -824,6 +822,7 @@ $dropdown-item-padding-y:           .25rem !default;
 $dropdown-item-padding-x:           1.5rem !default;
 
 $dropdown-header-color:             $gray-600 !default;
+$dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x !default;
 
 
 // Pagination
@@ -1173,6 +1172,7 @@ $pre-scrollable-max-height:         340px !default;
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 $overflows: auto, hidden !default;
 $positions: static, relative, absolute, fixed, sticky !default;
+$user-selects: all, auto, none !default;
 
 
 // Printing
