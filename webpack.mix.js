@@ -19,6 +19,8 @@ if (process.env.MIX_BUILD === 'dist') {
     mix.sass('src/assets/sass/siqtheme.scss', 'assets/css/')
         .js('src/assets/scripts/siqtheme.js', 'assets/scripts/')
         .setPublicPath('public')
+        .setResourceRoot('../../')
+        .sourceMaps()
         .browserSync({
             proxy: 'siqtheme.test',
             files: ['public/**/*.html', 'public/assets/css/**/*.css', 'public/assets/scripts/**/*.js']
