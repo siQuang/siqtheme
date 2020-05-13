@@ -108,6 +108,11 @@
         .btn-toggle {
             margin-left: 20px;
         }
+
+        .navbar-menu .menu-item>.dropdown-menu {
+            width: 100vw;
+            left: -5px !important;
+        }
     }
 
     .sidebar {
