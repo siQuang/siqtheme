@@ -55,7 +55,7 @@
     "@ckeditor/ckeditor5-build-decoupled-document": "^18.0.0",
     "@ckeditor/ckeditor5-build-inline": "^18.0.0",
     "apexcharts": "^3.18.1",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "4.4.1",
     "bootstrap-datepicker": "^1.9.0",
     "bootstrap-select": "^1.13.14",
     "bootstrap-timepicker": "^0.5.2",
