@@ -92,6 +92,9 @@
                                         <a href="#"><span class="menu-text">CKEditor</span></a>
                                         <div class="subcat">
                                             <ul>
+                                                <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditorinline') { %>class="active" <% } %>>
+                                                    <a href="fm_ckeditor_inline.html">Inline</a>
+                                                </li>
                                                 <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditorclassic') { %>class="active" <% } %>>
                                                     <a href="fm_ckeditor_classic.html">Classic</a>
                                                 </li>
@@ -100,9 +103,6 @@
                                                 </li>
                                                 <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditorblock') { %>class="active" <% } %>>
                                                     <a href="fm_ckeditor_block.html">Balloon Block</a>
-                                                </li>
-                                                <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditorinline') { %>class="active" <% } %>>
-                                                    <a href="fm_ckeditor_inline.html">Inline</a>
                                                 </li>
                                                 <li <% if (htmlWebpackPlugin.options.submenu2 == 'fmckeditordocument') { %>class="active" <% } %>>
                                                     <a href="fm_ckeditor_document.html">Document</a>
@@ -183,10 +183,11 @@
                                 <span class="badge badge-pill badge-primary">New</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:;">
+                        <li class="<% if (htmlWebpackPlugin.options.topmenu == 'ca') { %>active<% } %>">
+                            <a href="ex_calendar.html">
                                 <i class="ti-calendar"></i>
                                 <span class="menu-text">Calendar</span>
+                                <span class="badge badge-pill badge-primary">New</span>
                             </a>
                         </li>
                         <li>

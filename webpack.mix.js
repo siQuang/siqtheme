@@ -1,6 +1,7 @@
 const mix = require('laravel-mix');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pages = require('./pages');
+const vendors = require('./vendors');
 
 /*
  |--------------------------------------------------------------------------
@@ -121,17 +122,15 @@ if (mixBuild === 'dist') {
      | Vendors Assets
      |--------------------------------------------------------------------------
      */
-    const vendors = require('./vendors');
-
     vendors.forEach(vendor => {
         let ext = path.extname(vendor.src.toLowerCase());
 
         if (ext === '.css') {
-            mix.styles(vendor.src, vendor.dest);
+            mix.styles(vendor.src, vendor.out);
         }
         
         if (ext === '.js') {
-            mix.scripts(vendor.src, vendor.dest);
+            mix.scripts(vendor.src, vendor.out);
         }
     });
 

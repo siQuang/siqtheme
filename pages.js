@@ -6,8 +6,7 @@ let themeName       = "siQtheme",
     tablesMenu      = "tb",
     formsMenu       = "fm",
     chartsMenu      = "ch",
-    pagesMenu       = "pg",
-    extraMenu       = "dc";
+    pagesMenu       = "pg";
 
 /*
  |--------------------------------------------------------------------------
@@ -156,7 +155,13 @@ module.exports = [
         title: themeName + " Documentation",
         template: sourcePath + "documentation.ejs",
         filename: "documentation.html",
-        topmenu: extraMenu,
+        topmenu: 'dc',
         submenu: "documentation"
+    }, {
+        title: themeName + " FullCalendar",
+        template: sourcePath + "ex_calendar.ejs",
+        filename: "ex_calendar.html",
+        topmenu: 'ca',
+        submenu: "calendar"
     }
 ];

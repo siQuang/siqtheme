@@ -63,6 +63,7 @@
     "code-prettify": "^0.1.0",
     "datatables.net-bs4": "^1.10.20",
     "font-awesome": "^4.7.0",
+    "fullcalendar": "^3.10.1",
     "jquery": "3.5.1",
     "moment": "^2.24.0",
     "peity": "^3.3.0",

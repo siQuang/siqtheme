@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include src/partials/meta.ejs %>
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% include src/partials/styles.ejs %>
+    <link rel="stylesheet" href="assets/vendors/fullcalendar/fullcalendar.min.css">
+</head>
+
+<body class="theme-dark">
+    <div class="grid-wrapper sidebar-bg bg1">
+
+        <!-- BOF HEADER -->
+        <% include src/partials/header.ejs %>
+        <!-- EOF HEADER -->
+
+        <!-- BOF ASIDE-LEFT -->
+        <% include src/partials/asideleft.ejs %>
+        <!-- EOF ASIDE-LEFT -->
+
+        <!-- BOF MAIN -->
+        <div class="main">
+
+            <!-- BOF Breadcrumb -->
+            <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href=""><i class="ti-home"></i> Dashboard</a></li>
+                        <li class="breadcrumb-item active">FullCalendar</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- EOF Breadcrumb -->
+
+            <!-- BOF MAIN-BODY -->
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">FullCalendar</h2>
+                            <p class="card-text">FullCalendar is great for displaying events, but it isn't a complete solution for event content-management. Beyond dragging an event to a different time/day, you cannot change an event's name or other associated data. It is up to you to add this functionality through FullCalendar's API.</p>
+                            <p class="card-text">Visit <a href="https://fullcalendar.io/" target="_blank">FullCalender Website</a> for more information and documentation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" id="calendar"></div>
+            </div>
+            <!-- EOF MAIN-BODY -->
+
+        </div>
+        <!-- EOF MAIN -->
+
+        <!-- BOF FOOTER -->
+        <% include src/partials/footer.ejs %>
+        <!-- EOF FOOTER -->
+
+        <!-- BOF ASIDE-RIGHT -->
+        <% include src/partials/asideright.ejs %>
+        <!-- EOF ASIDE-RIGHT -->
+
+        <div id="overlay"></div>
+
+    </div> <!-- END WRAPPER -->
+
+    <% include src/partials/scripts.ejs %>
+    <script src="assets/vendors/fullcalendar/fullcalendar.min.js"></script>
+
+    <script>
+    $(function () {
+
+        $('#calendar').fullCalendar({
+            themeSystem: 'bootstrap4',
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listMonth'
+            },
+            weekNumbers: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: 'https://fullcalendar.io/demo-events.json'
+        });
+
+    });
+    </script>
+</body>
+
+</html>
