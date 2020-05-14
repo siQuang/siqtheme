@@ -23,5 +23,4 @@ sftp.json
 #-------------------------
 node_modules
 package-lock.json
-vendor
 public

@@ -1,6 +1,6 @@
 {
   "name": "siqtheme",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "siQuang (Simon Nguyen)",
   "license": "MIT",
   "homepage": "https://github.com/siQuang/siqtheme",
@@ -62,14 +62,12 @@
     "bootstrap4-toggle": "^3.6.1",
     "code-prettify": "^0.1.0",
     "datatables.net-bs4": "^1.10.20",
-    "datatables.net-responsive-bs4": "^2.2.3",
     "font-awesome": "^4.7.0",
     "jquery": "3.5.1",
     "moment": "^2.24.0",
     "peity": "^3.3.0",
     "popper.js": "^1.16.1",
     "simplebar": "^5.2.0",
-    "summernote": "^0.8.16",
     "themify-icons-scss": "^1.0.0",
     "toastr": "^2.1.4"
   }
