@@ -7,12 +7,12 @@ const pages = require('./pages');
  | Mix Asset Management
  |--------------------------------------------------------------------------
  */
-if (process.env.MIX_BUILD === 'dist') {
+const mixBuild = process.env.MIX_BUILD || 'mix';
+
+if (mixBuild === 'dist') {
     mix.sass('src/assets/sass/siqtheme.scss', 'dist/css')
         .js('src/assets/scripts/siqtheme.js', 'dist/js')
-        .options({
-            processCssUrls: false
-        });
+        .setPublicPath('dist');
 } else {
     let googleAnalytics = (mix.inProduction()) ? true : false;
 
@@ -121,60 +121,20 @@ if (process.env.MIX_BUILD === 'dist') {
      | Vendors Assets
      |--------------------------------------------------------------------------
      */
-    mix.styles(
-            'node_modules/bootstrap4-toggle/css/bootstrap4-toggle.min.css', 
-            'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.css')
-        .scripts(
-            'node_modules/bootstrap4-toggle/js/bootstrap4-toggle.min.js', 
-            'public/assets/vendors/bootstrap4-toggle/bootstrap4-toggle.min.js')
-        .styles(
-            'node_modules/bootstrap-select/dist/css/bootstrap-select.min.css', 
-            'public/assets/vendors/bootstrap-select/bootstrap-select.min.css')
-        .scripts(
-            'node_modules/bootstrap-select/dist/js/bootstrap-select.min.js', 
-            'public/assets/vendors/bootstrap-select/bootstrap-select.min.js')
-        .styles(
-            'node_modules/apexcharts/dist/apexcharts.css', 
-            'public/assets/vendors/apexcharts/apexcharts.css')
-        .scripts(
-            'node_modules/apexcharts/dist/apexcharts.js', 
-            'public/assets/vendors/apexcharts/apexcharts.js')
-        .scripts(
-            'node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js',
-            'public/assets/vendors/ckeditor5/classic/ckeditor.js')
-        .scripts(
-            'node_modules/@ckeditor/ckeditor5-build-balloon/build/ckeditor.js',
-            'public/assets/vendors/ckeditor5/balloon/ckeditor.js')
-        .scripts(
-            'node_modules/@ckeditor/ckeditor5-build-balloon-block/build/ckeditor.js',
-            'public/assets/vendors/ckeditor5/balloon-block/ckeditor.js')
-        .scripts(
-            'node_modules/@ckeditor/ckeditor5-build-inline/build/ckeditor.js',
-            'public/assets/vendors/ckeditor5/inline/ckeditor.js')
-        .scripts(
-            'node_modules/@ckeditor/ckeditor5-build-decoupled-document/build/ckeditor.js',
-            'public/assets/vendors/ckeditor5/decoupled-document/ckeditor.js')
-        .styles(
-            'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css', 
-            'public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.css')
-        .scripts(
-            'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 
-            'public/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.js')
-        .styles(
-            'node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css',
-            'public/assets/vendors/bootstrap-timepicker/bootstrap-timepicker.css')
-        .scripts(
-            'node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js',
-            'public/assets/vendors/bootstrap-timepicker/bootstrap-timepicker.js')
-        .scripts(
-            'node_modules/peity/jquery.peity.min.js', 
-            'public/assets/vendors/peity/jquery.peity.min.js')
-        .styles(
-            'node_modules/code-prettify/styles/desert.css', 
-            'public/assets/vendors/code-prettify/prettify.css')
-        .scripts(
-            'node_modules/code-prettify/loader/run_prettify.js', 
-            'public/assets/vendors/code-prettify/prettify.js');
+    const vendors = require('./vendors');
+
+    vendors.forEach(vendor => {
+        let ext = path.extname(vendor.src.toLowerCase());
+
+        if (ext === '.css') {
+            mix.styles(vendor.src, vendor.dest);
+        }
+        
+        if (ext === '.js') {
+            mix.scripts(vendor.src, vendor.dest);
+        }
+    });
+
 }
 
 // Full API
