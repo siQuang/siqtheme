@@ -10,7 +10,7 @@ siQtheme is a responsive admin template created with Bootstrap 4 and using Webpa
 
 Author: Simon Nguyen - [siQuang](https://siquang.com)
 
-**View demo here [https://siqtheme.com](https://siqtheme.com)**
+**View demo here [https://siqtheme.siquang.com](siQtheme Demo)**
 
 !["siQtheme Dark"](https://siqtheme.siquang.com/assets/img/siqtheme_dark.png "siQtheme Dark")
 
